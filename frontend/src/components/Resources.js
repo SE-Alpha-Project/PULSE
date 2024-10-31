@@ -18,31 +18,6 @@ import axios from "axios";
 import Footer from "./Footer";
 import { CardActionArea } from "@mui/material";
 
-const SearchBar = ({ setSearchQuery }) => (
-  <form>
-    <TextField
-      id="search-bar"
-      className="text"
-      onInput={(e) => {
-        setSearchQuery(e.target.value);
-      }}
-      label="Search for news, articles, blogs .."
-      variant="outlined"
-      placeholder="Search..."
-      size="small"
-    />
-  </form>
-);
-
-const filterData = (query, cards) => {
-  if (!query) {
-    return cards;
-  } else {
-    return cards.filter((e) =>
-      e.title.toLowerCase().includes(query.toLowerCase())
-    );
-  }
-};
 
 const defaultTheme = createTheme();
 
@@ -50,10 +25,10 @@ export default function Resources(props) {
     const [resources, setResources] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
+    const [visibleCount, setVisibleCount] = useState(9);
 
     const [searchQuery, setSearchQuery] = useState("");
-    const location = useLocation();
+
 
     useEffect(() => {
         const fetchResources = async () => {
@@ -65,7 +40,6 @@ export default function Resources(props) {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                console.log(data)
                 setResources(data);
             } catch (error) {
                 setError(error.message);
@@ -75,7 +49,11 @@ export default function Resources(props) {
         };
 
     fetchResources();
-}, [location.state]);
+}, []);
+
+const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 9); 
+  };
 
 
 
@@ -105,23 +83,13 @@ export default function Resources(props) {
                         <Typography variant="h5" align="center" color="text.secondary" paragraph>
                         Discover a wealth of articles, blogs, and news dedicated to helping you achieve your wellness goals. Stay informed with the latest tips, workouts, nutrition advice, and wellness insights that can help you live a healthier life.
                         </Typography>
-                        <Stack
-                            sx={{ pt: 4 }}
-                            direction="row"
-                            spacing={2}
-                            justifyContent="center"
-                        >
-                            <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-                        </Stack>
                     </Container>
                 </Box>
                 <Container>
-                    <Typography variant="h4" align="center" gutterBottom>
-                        Health and Fitness Articles
-                    </Typography>
+
                     {console.log(resources)}
                     <Grid container spacing={4}>
-                             {resources.slice(0, 9).map((article, index) => (
+                             {resources.slice(0, visibleCount).map((article, index) => (
                             <Grid item key={index} xs={12} sm={6} md={4}>
                             <Card sx={{ height: '300px', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                             <CardMedia
@@ -147,6 +115,23 @@ export default function Resources(props) {
                         </Grid>
                     ))}
                 </Grid> 
+                {visibleCount < resources.length && (
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+                <Button
+                    onClick={handleShowMore}
+                    variant="contained"
+                    sx={{
+                        backgroundColor: 'orange', 
+                        color: '#FFFFFF', 
+                        '&:hover': {
+                            backgroundColor: '#FFAA3D', 
+                        },
+                    }}
+                >
+                    Show More
+                </Button>
+            </Box>
+                        )}
                     </Container>
                 <Footer/>
             </main>
