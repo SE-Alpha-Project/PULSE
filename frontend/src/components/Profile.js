@@ -112,6 +112,7 @@ function Profile(props) {
   const initialHeight = "";
   const initialBMI = 0;
   const initialsex = "";
+  const initalDiet = "";
   var postHeight = 0;
   var postWeight = 0;
   const [firstName, setFirstName] = useState(initialFirstName);
@@ -121,8 +122,10 @@ function Profile(props) {
   const [height, setHeight] = useState(initialHeight);
   const [BMI, setBMI] = useState(initialBMI);
   const [sex, setSex] = useState(initialsex)
+  const [diet, setDiet] = useState(initalDiet)
   const activityOptions = {Minimal:"Sedentary(Office Job)",Light: "Light exercise (1-2 days/week)",Moderate: "Moderate exercise (3-5 days/week)",Heavy: "Heavy exercise (6-7 days/week)",Athlete: "Athlete (2x per day)"}
   const sexes = ["Male", "Female"]
+  const diets = ["Vegetarian", "Non-Vegeterian", "Vegan"]
   useEffect(() => {
     // Make API call to backend to get food items and their calories from DB.
     axios({
@@ -141,6 +144,7 @@ function Profile(props) {
         setWeight(res.weight)
         setHeight(res.height)
         setSex(res.sex)
+        setDiet(res.diet)
         setActivityLevel(res.activity_level)
         setTargetCalories(res.target_calories)
         settargetWeight(res.target_weight)
@@ -180,6 +184,7 @@ function Profile(props) {
           height: postHeight,
           weight: postWeight,
           sex: sex,
+          diet: diet,
           activityLevel: activityLevel
         },
       })
@@ -298,6 +303,24 @@ function Profile(props) {
                   onChange={(e) => setSex(e.target.value)}
                 >
                   {sexes.map((item) => (
+                    <MenuItem key={item} value={item}>
+                    {item}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+              </Box>
+              <Box mb={2}>
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Diet</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={diet}
+                  label="Diet"
+                  onChange={(e) => setDiet(e.target.value)}
+                >
+                  {diets.map((item) => (
                     <MenuItem key={item} value={item}>
                     {item}
                     </MenuItem>
