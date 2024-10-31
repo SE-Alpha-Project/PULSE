@@ -7,7 +7,10 @@ class APITestCase(unittest.TestCase):
     
     def setUp(self):
         self.app = api
+        
         self.app.config['TESTING'] = True
+        self.app_context = api.app_context()
+        self.app_context.push()
         setup_mongo_client(self.app)  # Set up the mongo client after changing the TESTING flag
         self.client = self.app.test_client()
         print("Using MongoDB client:", type(self.app.mongo_client)) 
