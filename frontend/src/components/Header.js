@@ -10,10 +10,11 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
+import WhatshotIcon from "@mui/icons-material/Whatshot"; // Updated import from @material-ui/icons to @mui/icons-material
 import axios from "axios";
 import useToken from './authentication/useToken';
 import { updateState } from "../burnoutReducer";
+
 
 const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", 'FAQ': "/faq", 'Contact Us': "/contactus"};
 const userPages = { Profile: "/profile" };

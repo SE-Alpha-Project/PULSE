@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material'; // Updated import
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Updated import
 import Footer from './Footer';
+
 
 const FAQ = () => {
   const faqData = [

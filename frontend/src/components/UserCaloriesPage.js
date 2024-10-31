@@ -21,7 +21,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import dayjs from "dayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
+import WhatshotIcon from "@mui/icons-material/Whatshot"; // Updated import
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import SportsMartialArtsIcon from "@mui/icons-material/SportsMartialArts";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
