@@ -1169,7 +1169,7 @@ def get_top_resources():
     url = (
         'https://newsapi.org/v2/everything?'
         'q=fitness OR nutrition&'
-        'apiKey=077f18ffe60042bb908e3d88640165e1'  
+        'apiKey=${{ secrets.NEWS_API_KEY }}'  
     )
 
     try:
