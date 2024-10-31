@@ -1215,10 +1215,15 @@ def get_model_response(question):
            
 @api.route('/resources')
 def get_top_resources():
+    api_key = os.getenv("NEWS_API_KEY")
+    if not api_key:
+        print("Error: NEWS_API_KEY is missing. Please set the API key in the environment.")
+        return jsonify({"error": "API key is missing"}), 500
+
     url = (
         'https://newsapi.org/v2/everything?'
         'q=fitness OR nutrition&'
-        'apiKey=${{ secrets.NEWS_API_KEY }}' #add your news api key here 
+        f'apiKey={api_key}'  
     )
 
     try:
