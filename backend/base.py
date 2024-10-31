@@ -20,6 +20,10 @@ from functools import reduce
 from bson import json_util
 from pymongo import MongoClient
 from flasgger import Swagger
+from llama_index.llms.ollama import Ollama
+import time
+import requests  
+import logging
 
 
 api = Flask(__name__)
@@ -1160,7 +1164,51 @@ def calculate_tdee(height, weight, age, sex, activityLevel):
     tdee = int((bmr * personal_activity_levels[activityLevel]))
     return tdee
 
+model = Ollama(model="llama3.2")
 
-# @api.route("/calendar")
-# def calendar():
-#     return render_template("calendar.html")
+@api.route('/chatbot', methods=['POST'])
+def chatbot():
+    data = request.get_json()
+    question = data.get('question')
+    answer = get_model_response(question)
+    print("Model response:", answer)
+ 
+    return jsonify({'answer': answer})
+
+
+logging.basicConfig(level=logging.ERROR)
+
+def get_model_response(question):
+    attempts = 3
+    for attempt in range(attempts):
+        try:
+            modified_prompt = "Answer concisely by default. " + question
+            result = model.complete(modified_prompt)
+            print(result) 
+
+            if hasattr(result, 'text'):
+                return result.text.strip()
+            else:
+                return str(result).strip()
+
+        except requests.exceptions.Timeout:
+            logging.error("Timeout error occurred. Retrying...")
+            if attempt < attempts - 1:
+                time.sleep(2)  
+            else:
+                return "Error: Request timed out. Please try again later."
+
+        except requests.exceptions.ConnectionError:
+            logging.error("Connection error occurred. Retrying...")
+            if attempt < attempts - 1:
+                time.sleep(2) 
+            else:
+                return "Error: Network issue. Please check your connection."
+
+        except Exception as e:
+            logging.error(f"An unexpected error occurred: {str(e)}")
+            if attempt < attempts - 1:
+                time.sleep(2)  
+            else:
+                return f"Error: {str(e)}"
+
