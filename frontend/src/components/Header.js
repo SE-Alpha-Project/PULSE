@@ -16,7 +16,9 @@ import useToken from './authentication/useToken';
 import { updateState } from "../burnoutReducer";
 
 
-const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", Resources :"/resources", 'FAQ': "/faq" , 'Contact Us': "/contactus"};
+
+
+const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", 'Calender': "/calender", 'Resources' :"/resources", 'FAQ': "/faq", 'Contact Us': "/contactus"};
 const userPages = { Profile: "/profile" };
 
 function Header(props) {

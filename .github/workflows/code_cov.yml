@@ -13,10 +13,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Install Python 3.7.17
+    - name: Install Python 3.9.20
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7.17
+        python-version: 3.9.20
     - name: Install dependencies
       working-directory: ./backend
       run: |
@@ -24,6 +24,8 @@ jobs:
         echo requirements installed  
     - name: Run tests
       working-directory: ./backend
+      env:
+         NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
       run: |
         python -m coverage run -m unittest test_api.py
         coverage json
@@ -32,4 +34,4 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: ./backend/coverage.json
-    
+

@@ -8,10 +8,20 @@ class APITestCase(unittest.TestCase):
     def setUp(self):
         self.app = api
         self.app.config['TESTING'] = True
+        self.app_context = self.app.app_context()
+        self.app_context.push()
+        self.request_context = self.app.test_request_context()
+        self.request_context.push()
         setup_mongo_client(self.app)  # Set up the mongo client after changing the TESTING flag
         self.client = self.app.test_client()
         print("Using MongoDB client:", type(self.app.mongo_client)) 
 
+
+    def tearDown(self):
+                # Pop the contexts after tests
+            self.request_context.pop()
+            self.app_context.pop()
+    
     
     def test_get_events(self):
         # Create a mock collection

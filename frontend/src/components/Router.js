@@ -11,8 +11,9 @@ import burnoutReducer, { updateState } from "../burnoutReducer";
 import PrivateRoute from "./PrivateRoute";
 import useToken from "./authentication/useToken";
 import FAQ from "./faq";
-import ChatbotComponent from './chatbot'; 
 import Resources from "./Resources";
+import Calender from "./calender"
+
 
 const initialState = {
   loggedIn: false,
@@ -51,6 +52,9 @@ function Router() {
       </PrivateRoute>
       <PrivateRoute state={state} dispatch={dispatch} path="/faq">
         <FAQ state={state} dispatch={dispatch} />
+      </PrivateRoute>
+        <PrivateRoute state={state} dispatch={dispatch} path="/calender">
+        <Calender state={state} dispatch={dispatch} />
       </PrivateRoute>
       <PrivateRoute state={state} dispatch={dispatch} path="/contactus">
         <ContactUs state={state} dispatch={dispatch} />
