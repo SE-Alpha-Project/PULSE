@@ -15,7 +15,7 @@ import axios from "axios";
 import useToken from './authentication/useToken';
 import { updateState } from "../burnoutReducer";
 
-const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", 'FAQ': "/faq", 'Contact Us': "/contactus"};
+const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", 'Calender': "/calender", 'FAQ': "/faq", 'Contact Us': "/contactus"};
 const userPages = { Profile: "/profile" };
 
 function Header(props) {
