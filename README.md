@@ -267,7 +267,7 @@ Step 2:
 
     cd backend
 
-  Once in the backend, run:
+  Once in the backend, go to the `db` folder run:
   
     python insert_event_data.py
     python insert_food_data.py
@@ -330,6 +330,9 @@ The application can be extended with features like:
 <center>
   <table>
     <tr>
+    <td align="center"><a href="https://github.com/XingJinming-real"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/krishapatel10"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>krisha patel</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Shreyas Devaraj</b></sub></a><br /></td>
         <td align="center"><a href="https://github.com/aiyer786"><img src="https://avatars.githubusercontent.com/u/60314222?s=400&u=0984f88aeb3a9c30f4ec8145176134e626843fd5&v=4" width="100px;" alt=""/><br /><sub><b>Aditya Iyer</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/aditikilledar"><img src="https://avatars.githubusercontent.com/u/73051765?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Killedar</b></sub></a></td>
     <td align="center"><a href="https://github.com/shashank-madan"><img src="https://avatars.githubusercontent.com/u/52149707?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Shashank Madan</b></sub></a><br /></td>
