@@ -1145,6 +1145,58 @@ def getUserRegisteredEvents():
         statusCode = 500
     return jsonify(response), statusCode
 
+@api.route("/getFitnessPlan", methods=["GET"])
+@jwt_required()
+def getFitnessPlan():
+    """
+    Retrieve the user's fitness plan if present
+
+    This endpoint allows an authenticated user to retrieve their fitness plan
+
+    ---
+    tags:
+      - Events
+    security:
+      - JWT: []
+    responses:
+      200:
+        description: Successfully retrieved the user's fitness plan
+        schema:
+          type: object
+          properties:
+            fitness_plan:
+              type: String
+              description: String in the format of html to be rendered easily
+            calories:
+      401:
+        description: Unauthorized. User must be logged in to retrieve their registered events.
+      500:
+        description: An error occurred while retrieving the user's info/in generating the fitness plan
+    """
+    try:
+        current_user = get_jwt_identity()
+        user_data = mongo.user.find_one({"email": current_user})
+
+        if user_data and "fitness_plan" in user_data:
+            fitness_plan = user_data["fitness_plan"]
+            response = {
+                "status": "Success",
+                "fitness_plan": fitness_plan
+            }
+            statusCode = 200
+        else:
+            response = {
+                "status": "Not Found",
+                "message": "Fitness plan not found."
+            }
+            statusCode = 404
+    except Exception as e:
+        response = {"status": "Error", "message": str(e)}
+        statusCode = 500
+    
+    return jsonify(response), statusCode
+
+
 @api.route("/generateFitnessPlan", methods=["POST"])
 @jwt_required()
 def generateFitnessPlan():
@@ -1162,38 +1214,12 @@ def generateFitnessPlan():
       200:
         description: Successfully retrieved the user's info and generated a fitness plan
         schema:
-          type: array
-          items:
-            type: object
-            properties:
-              nutritionPlan:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    meal:
-                      type: string
-                      description: Meal plan of the user
-                    hydration:
-                      type: string
-                      description: Hydration requirements for the user's diet
-              Workput Plan:
-                type: array
-                items:
-                  type: object
-                  description: Generated exercise plan for the user
-            example:
-              [
-                {
-                  "eventName": "Yoga",
-                  "date": "2023-12-11"
-                },
-                {
-                  "eventName": "Swimming",
-                  "date": "2023-11-10"
-                },
-                ...
-              ]
+          type: object
+          properties:
+            fitness_plan:
+              type: String
+              description: String in the format of html to be rendered easily
+            calories:
       401:
         description: Unauthorized. User must be logged in to retrieve their registered events.
       500:
@@ -1205,6 +1231,7 @@ def generateFitnessPlan():
 
         if user_data:
             fitness_plan = generate_fitness_plan(user_data)
+            mongo.user.update_one({"email": current_user},{"$set": {"fitness_plan": fitness_plan}})
             response = {
                 "status": "Success",
                 "fitness_plan": fitness_plan
@@ -1252,10 +1279,10 @@ def generate_fitness_plan(user_data):
     client = Mistral(api_key=api_key)
 
     prompt = (
-        f"You are a fitness coach. Generate a fitness plan in JSON format such as "
-        f'[{{"Nutrition Plan": [{{"1. Meal": ""}}, {{"2. Hydration": ""}}]}}, '
-        f'{{"Workout Plan": []}}, '
-        f'{{"Additional Comments": "---\\n---\\n"}}], '
+        f"You are a fitness coach. Generate and stick to the fitness plan in plain text with html tags such as <b>,<h>,<br> for new lines; don't use markdown for the format below. You can add the relevant suggestions for each column and add <br> after every meal/exercise."
+        f"1. Nutrition Plan : Meals/Hydration etc"
+        f"2. Workout Plan: Depending on activity level"
+        f"3. Any other comments"
         f"for the user having the attributes: "
         f"first name: {user_data['first_name']}, "
         f"last name: {user_data['last_name']}, "
@@ -1280,7 +1307,7 @@ def generate_fitness_plan(user_data):
         ]
     )
 
-    print(chat_response.choices[0].message.content)
+    return chat_response.choices[0].message.content
 
 
 # @api.route("/calendar")

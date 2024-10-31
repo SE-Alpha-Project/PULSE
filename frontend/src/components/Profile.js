@@ -15,6 +15,7 @@ import {
   FormControl,
   InputLabel,
   Select,
+  CircularProgress,
 } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Box from "@mui/material/Box";
@@ -23,6 +24,7 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import FitnessPlanCard from "./FitnessPlanCard";
 
 
 const weightCardStyles = {
@@ -54,7 +56,7 @@ function Profile(props) {
     settargetWeight(editableWeight);
     setTargetCalories(editableTargetCalories);
     setActivityLevel(editableActivityLevel);
-    console.log(targetWeight,currentTargetCalories, activityLevel)
+    console.log(targetWeight, currentTargetCalories, activityLevel)
     if (units === "metric") {
       postWeight = (parseFloat(editableWeight) * 2.20462).toFixed(2);
     } else {
@@ -95,7 +97,7 @@ function Profile(props) {
       setHeight((parseFloat(height) / 30.4).toFixed(2));
       setWUnit("lbs");
       setHUnit("ft");
-    } else if(event.target.value === "metric" && event.target.value !== prevSelectionUnit){
+    } else if (event.target.value === "metric" && event.target.value !== prevSelectionUnit) {
       setPrevUnit("metric");
       setEditableTargetWeight((parseFloat(editableWeight) / 2.20462).toFixed(2));
       setWeight((parseFloat(weight) / 2.20462).toFixed(2));
@@ -121,9 +123,13 @@ function Profile(props) {
   const [weight, setWeight] = useState(initialWeight);
   const [height, setHeight] = useState(initialHeight);
   const [BMI, setBMI] = useState(initialBMI);
-  const [sex, setSex] = useState(initialsex)
-  const [diet, setDiet] = useState(initalDiet)
-  const activityOptions = {Minimal:"Sedentary(Office Job)",Light: "Light exercise (1-2 days/week)",Moderate: "Moderate exercise (3-5 days/week)",Heavy: "Heavy exercise (6-7 days/week)",Athlete: "Athlete (2x per day)"}
+  const [sex, setSex] = useState(initialsex);
+  const [diet, setDiet] = useState(initalDiet);
+  const [fitnessPlan, setFitnessPlan] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [planExists, setPlanExists] = useState(false);
+
+  const activityOptions = { Minimal: "Sedentary(Office Job)", Light: "Light exercise (1-2 days/week)", Moderate: "Moderate exercise (3-5 days/week)", Heavy: "Heavy exercise (6-7 days/week)", Athlete: "Athlete (2x per day)" }
   const sexes = ["Male", "Female"]
   const diets = ["Vegetarian", "Non-Vegeterian", "Vegan"]
   useEffect(() => {
@@ -160,48 +166,99 @@ function Profile(props) {
           console.log(error.response.headers);
         }
       });
-    }, [props.state.token]);
+  }, [props.state.token]);
 
-    const handleProfileSubmit = (e) => {
-      console.log('height=' + height + 'weight:'+ weight)
-      if(units === "metric") {
-        postWeight = (parseFloat(weight) * 2.20462).toFixed(2)
-        postHeight = (parseFloat(height) / 30.4).toFixed(2)
-      } else {
-        postWeight = weight
-        postHeight = height
-      }
-      axios({
-        method: "POST",
-        url: "/profileUpdate",
-        headers: {
-          Authorization: "Bearer " + props.state.token,
-        },
-        data: {
-          firstName: firstName,
-          lastName: lastName,
-          age: age,
-          height: postHeight,
-          weight: postWeight,
-          sex: sex,
-          diet: diet,
-          activityLevel: activityLevel
-        },
+  const handleProfileSubmit = (e) => {
+    console.log('height=' + height + 'weight:' + weight)
+    if (units === "metric") {
+      postWeight = (parseFloat(weight) * 2.20462).toFixed(2)
+      postHeight = (parseFloat(height) / 30.4).toFixed(2)
+    } else {
+      postWeight = weight
+      postHeight = height
+    }
+    axios({
+      method: "POST",
+      url: "/profileUpdate",
+      headers: {
+        Authorization: "Bearer " + props.state.token,
+      },
+      data: {
+        firstName: firstName,
+        lastName: lastName,
+        age: age,
+        height: postHeight,
+        weight: postWeight,
+        sex: sex,
+        diet: diet,
+        activityLevel: activityLevel
+      },
+    })
+      .then((response) => {
+        const res = response.data;
+        console.log(res)
+        window.location.reload(false)
       })
-        .then((response) => {
-          const res = response.data;
-          console.log(res)
-          window.location.reload(false)
-        })
-        .catch((error) => {
-          if (error.response) {
-            console.log(error.response);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          }
-        });
-    };
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        }
+      });
+  };
 
+
+
+  // Check if a fitness plan exists on component mount
+  useEffect(() => {
+    axios({
+      method: 'GET',
+      url: '/getFitnessPlan', // Assuming you create this endpoint
+      headers: {
+        Authorization: 'Bearer ' + props.state.token,
+      },
+    })
+      .then((response) => {
+        const res = response.data;
+        if (res.status === 'Success') {
+          setFitnessPlan(res.fitness_plan);
+          setPlanExists(true);
+        }
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.error('Error fetching fitness plan:', error.response);
+        }
+      });
+  }, [props.state.token]);
+
+  const handleGeneratePlan = () => {
+    setLoading(true);
+    axios({
+      method: 'POST',
+      url: '/generateFitnessPlan',
+      headers: {
+        Authorization: 'Bearer ' + props.state.token,
+      },
+    })
+      .then((response) => {
+        const res = response.data;
+        if (res.status === 'Success') {
+          setFitnessPlan(res.fitness_plan);
+          setPlanExists(true);
+          console.log({ fitnessPlan })
+        }
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.error('Error generating fitness plan:', error.response);
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
   return (
     <>
       <Container maxWidth>
@@ -212,6 +269,7 @@ function Profile(props) {
             gap: 2,
             gridTemplateRows: "auto",
             gridTemplateAreas: `"profile  goals goals goals bmi"
+                                "profile  fitness fitness fitness fitness"
                                 "profile  . . . ."`,
             paddingTop: "2rem",
           }}
@@ -278,7 +336,7 @@ function Profile(props) {
               </Box>
               <Box mb={2}>
                 <TextField
-                  label={"Weight ("+weightUnit+")"}
+                  label={"Weight (" + weightUnit + ")"}
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
                   fullWidth
@@ -286,57 +344,57 @@ function Profile(props) {
               </Box>
               <Box mb={2}>
                 <TextField
-                  label={"Height ("+heightUnit+")"}
+                  label={"Height (" + heightUnit + ")"}
                   value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   fullWidth
                 />
               </Box>
               <Box mb={2}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Sex</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={sex}
-                  label="Sex"
-                  onChange={(e) => setSex(e.target.value)}
-                >
-                  {sexes.map((item) => (
-                    <MenuItem key={item} value={item}>
-                    {item}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Sex</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={sex}
+                    label="Sex"
+                    onChange={(e) => setSex(e.target.value)}
+                  >
+                    {sexes.map((item) => (
+                      <MenuItem key={item} value={item}>
+                        {item}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
               </Box>
               <Box mb={2}>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Diet</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={diet}
-                  label="Diet"
-                  onChange={(e) => setDiet(e.target.value)}
-                >
-                  {diets.map((item) => (
-                    <MenuItem key={item} value={item}>
-                    {item}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Diet</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={diet}
+                    label="Diet"
+                    onChange={(e) => setDiet(e.target.value)}
+                  >
+                    {diets.map((item) => (
+                      <MenuItem key={item} value={item}>
+                        {item}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
               </Box>
-              <Button variant="contained" color="primary" style={{ backgroundColor: 'orange' }}onClick={handleProfileSubmit}>
-                Update  
+              <Button variant="contained" color="primary" style={{ backgroundColor: 'orange' }} onClick={handleProfileSubmit}>
+                Update
               </Button>
             </CardContent>
           </Card>
           <Card sx={{ gridArea: "goals" }} elevation={5}>
             <CardHeader
-            title={"Your Goals"}
-            subheader={"Update your goals here"}
+              title={"Your Goals"}
+              subheader={"Update your goals here"}
             />
             <CardContent
               sx={{
@@ -349,91 +407,91 @@ function Profile(props) {
                 paddingTop: "2rem",
               }}
             >
-                <Card
-                  sx={{ gridArea: "targetWeight" }}
-                  elevation={2}
-                >
-                  <CardContent>
-                    <div style={weightCardStyles.weightContainer}>
-                      <IconButton
-                        style={{ color: 'orange' }}
-                        aria-label="weighing scale icon"
-                      >
-                        <FitnessCenterIcon fontSize="large" />
-                      </IconButton>
-                      <Typography style={weightCardStyles.weightText}>
-                        {targetWeight}
-                      </Typography>
-                    </div>
-                  </CardContent>
-                  <TextField
-                    label={"Target weight ("+weightUnit+")"}
-                    variant="outlined"
-                    fullWidth
-                    value={editableWeight}
-                    onChange={(e) => setEditableTargetWeight(e.target.value)}
-                  />
-                </Card>
-                <Card
-                  sx={{ gridArea: "activityLevel" }}
-                  elevation={2}
-                >
-                  <CardContent>
-                    <div style={weightCardStyles.weightContainer}>
-                      <IconButton
-                        style={{ color: 'orange' }}
-                        aria-label="running icon"
-                      >
-                        <DirectionsRunIcon fontSize="large" />
-                      </IconButton>
-                      <Typography style={weightCardStyles.weightText}>
-                        {activityLevel}
-                      </Typography>
-                    </div>
-                  </CardContent>
-                  <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Activity Level</InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={editableActivityLevel}
-                      label="Activity Level"
-                      onChange={(e) => setEditableActivityLevel(e.target.value)}
+              <Card
+                sx={{ gridArea: "targetWeight" }}
+                elevation={2}
+              >
+                <CardContent>
+                  <div style={weightCardStyles.weightContainer}>
+                    <IconButton
+                      style={{ color: 'orange' }}
+                      aria-label="weighing scale icon"
                     >
-                      {Object.keys(activityOptions).map((item) => (
-						<MenuItem key={activityOptions[item]} value={item}>
-						{activityOptions[item]}
-						</MenuItem>
-						))}
-                    </Select>
-                  </FormControl>
-                </Card>
-                <Card
-                  sx={{ gridArea: "targetCalories" }}
-                  elevation={2}
-                >
-                  <CardContent>
-                    <div style={weightCardStyles.weightContainer}>
-                      <IconButton
-                        style={{ color: 'orange' }}
-                        aria-label="calories icon"
-                      >
-                        <WhatshotIcon fontSize="large" />
-                      </IconButton>
-                      <Typography style={weightCardStyles.weightText}>
-                        {currentTargetCalories}
-                      </Typography>
-                    </div>
-                  </CardContent>
-                  <div>
-                    <Typography align="center">
-                      TDEE 
-                    </Typography>
-                    <Typography align="center">
-                    calculated based on your personal information
+                      <FitnessCenterIcon fontSize="large" />
+                    </IconButton>
+                    <Typography style={weightCardStyles.weightText}>
+                      {targetWeight}
                     </Typography>
                   </div>
-                </Card>
+                </CardContent>
+                <TextField
+                  label={"Target weight (" + weightUnit + ")"}
+                  variant="outlined"
+                  fullWidth
+                  value={editableWeight}
+                  onChange={(e) => setEditableTargetWeight(e.target.value)}
+                />
+              </Card>
+              <Card
+                sx={{ gridArea: "activityLevel" }}
+                elevation={2}
+              >
+                <CardContent>
+                  <div style={weightCardStyles.weightContainer}>
+                    <IconButton
+                      style={{ color: 'orange' }}
+                      aria-label="running icon"
+                    >
+                      <DirectionsRunIcon fontSize="large" />
+                    </IconButton>
+                    <Typography style={weightCardStyles.weightText}>
+                      {activityLevel}
+                    </Typography>
+                  </div>
+                </CardContent>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Activity Level</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={editableActivityLevel}
+                    label="Activity Level"
+                    onChange={(e) => setEditableActivityLevel(e.target.value)}
+                  >
+                    {Object.keys(activityOptions).map((item) => (
+                      <MenuItem key={activityOptions[item]} value={item}>
+                        {activityOptions[item]}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Card>
+              <Card
+                sx={{ gridArea: "targetCalories" }}
+                elevation={2}
+              >
+                <CardContent>
+                  <div style={weightCardStyles.weightContainer}>
+                    <IconButton
+                      style={{ color: 'orange' }}
+                      aria-label="calories icon"
+                    >
+                      <WhatshotIcon fontSize="large" />
+                    </IconButton>
+                    <Typography style={weightCardStyles.weightText}>
+                      {currentTargetCalories}
+                    </Typography>
+                  </div>
+                </CardContent>
+                <div>
+                  <Typography align="center">
+                    TDEE
+                  </Typography>
+                  <Typography align="center">
+                    calculated based on your personal information
+                  </Typography>
+                </div>
+              </Card>
               <Button
                 sx={{ gridArea: "saveButton" }}
                 variant="contained"
@@ -444,9 +502,9 @@ function Profile(props) {
               >
                 Update
               </Button>
-              </CardContent>
+            </CardContent>
           </Card>
-          <Card sx={{ gridArea: "bmi" }} elevation={5} alignItems = "center">
+          <Card sx={{ gridArea: "bmi" }} elevation={5} alignItems="center">
             <CardHeader
               title={"Your Body Mass Index (BMI)"}
               subheader={"Measured based on height and weight"}
@@ -458,14 +516,42 @@ function Profile(props) {
                 alignItems: "center",
               }}
             >
-            <Typography variant="h2" mt={2}>
-              {BMI}
-            </Typography>
+              <Typography variant="h2" mt={2}>
+                {BMI}
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card sx={{ gridArea: 'fitness' }} elevation={5}>
+            <CardHeader
+              title={"Your Fitness Plan"}
+              subheader={"Customize your fitness goals"}
+            />
+            <CardContent>
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ backgroundColor: 'orange' }}
+                onClick={handleGeneratePlan}
+                disabled={loading}
+              >
+                {loading ? <CircularProgress size={24} /> : 'Generate Fitness Plan'}
+              </Button>
+
+              {planExists ? (
+                <div
+                  dangerouslySetInnerHTML={{ __html: fitnessPlan }}
+                  style={{ marginTop: '16px' }} 
+                />
+              ) : (
+                <Typography variant="body2" color="textSecondary" mt={2}>
+                  No fitness plan available. Click "Generate Fitness Plan" to create one!
+                </Typography>
+              )}
             </CardContent>
           </Card>
         </Box>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }
