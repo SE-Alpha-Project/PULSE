@@ -40,9 +40,9 @@ def setup_mongo_client(app):
         mongo = app.mongo_client["test"]
     else:
         # Use a real MongoDB connection for production
-        app.mongo_client = MongoClient("localhost", 27017)
-        mongo = app.mongo_client["test"]
-
+        mongo_uri = app.config.get("MONGO_URI", "mongodb+srv://team96:qJ2wLfEuk7dwHVos@team96.aotv5.mongodb.net/test?retryWrites=true&w=majority&appName=Team96")
+        app.mongo_client = MongoClient(mongo_uri)
+        mongo = app.mongo_client.get_database() 
 
 # Call setup_mongo_client during normal (non-test) app initialization
 setup_mongo_client(api)

@@ -267,7 +267,7 @@ Step 2:
 
     cd backend
 
-  Once in the backend, run:
+  Once in the backend, go to the `db` folder run:
   
     python insert_event_data.py
     python insert_food_data.py
