@@ -24,6 +24,7 @@ from llama_index.llms.ollama import Ollama
 import time
 import requests  
 import logging
+import os
 
 
 api = Flask(__name__)
