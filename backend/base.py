@@ -1122,7 +1122,7 @@ def chatbot():
     data = request.get_json()
     question = data.get('question')
     answer = get_model_response(question)
-    print("Model response:", answer)
+    
  
     return jsonify({'answer': answer})
 
@@ -1162,3 +1162,29 @@ def get_model_response(question):
                 time.sleep(2)  
             else:
                 return f"Error: {str(e)}"
+            
+
+@api.route('/resources')
+def get_top_resources():
+    url = (
+        'https://newsapi.org/v2/everything?'
+        'q=fitness OR nutrition&'
+        'apiKey=077f18ffe60042bb908e3d88640165e1'  
+    )
+
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            articles = response.json().get('articles', [])
+            valid_articles = [
+                article for article in articles
+                if "[Removed]" not in (str(article.get('title', '')))
+            ]
+            print(valid_articles)
+            return valid_articles
+        else:
+            print(f"Error fetching news: {response.status_code} - {response.text}")
+            return jsonify([]), response.status_code  
+    except Exception as e:
+        print(f"Exception occurred: {str(e)}")
+        return jsonify([]), 500  

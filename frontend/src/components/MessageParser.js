@@ -5,11 +5,10 @@ class MessageParser {
     }
   
     parse(message) {
-        if (message.includes("hello")) {
-            this.actionProvider.handleHello();
-        } else {
+        
+            
             this.handleGeneralMessage(message);
-        }
+        
     }
   
     async handleGeneralMessage(message) {

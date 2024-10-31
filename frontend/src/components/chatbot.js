@@ -20,7 +20,7 @@ const ChatbotComponent = () => {
     
 
     return (
-        <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
+        <div style={{ position: 'fixed', bottom: '40px', right: '40px', zIndex: 1000 }}>
             
             <Button 
                 onClick={toggleChatbot} 
