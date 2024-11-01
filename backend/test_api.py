@@ -249,6 +249,45 @@ class APITestCase(unittest.TestCase):
         response = app_client .get('/myMeals')
 
         self.assertEqual(response.status_code, 401)
+        
+    @patch('base.requests.get')
+    @patch('os.getenv')
+    def test_get_top_resources_success(self, mock_getenv, mock_requests_get):
+        app_client = api.test_client()
+
+        mock_getenv.return_value = 'fake_api_value'
+
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+        'articles': [
+            {'title': 'Fitness Trends 2024'},
+            {'title': 'Nutrition Tips'},
+            {'title': '[Removed] Controversial Article'}
+        ]
+        }
+        mock_requests_get.return_value = mock_response
+    
+        response = app_client.get('/resources')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.json), 2)
+
+    @patch('base.requests.get')
+    @patch('os.getenv')
+    def test_get_top_resources_exception_api_error(self, mock_getenv, mock_requests_get):
+        app_client = api.test_client()
+
+        mock_getenv.return_value = 'fake_api_value'
+
+        mock_response = Mock()
+        mock_response.status_code = 400
+        mock_response.text = 'Bad Request'
+        mock_requests_get.return_value = mock_response
+    
+        response = app_client.get('/resources')
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json, {'error': 'Error fetching news'})
+
 
 if __name__ == "__main__":
     unittest.main()
