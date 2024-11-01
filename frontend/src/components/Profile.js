@@ -24,8 +24,6 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import FitnessPlanCard from "./FitnessPlanCard";
-
 
 const weightCardStyles = {
   weightContainer: {
