@@ -114,7 +114,7 @@ Overall, the current test suite focuses heavily on security and unauthorized acc
 <img width='600' src="resources/profile.png">
 
 ---
-
+[![codecov](https://codecov.io/gh/J1mmySE24/burnout/graph/badge.svg?token=nWtaSvxEU7)](https://codecov.io/gh/J1mmySE24/burnout)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/714758791.svg)](https://zenodo.org/doi/10.5281/zenodo.10208054)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
