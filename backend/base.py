@@ -1235,12 +1235,9 @@ def get_top_resources():
                 article for article in articles
                 if "[Removed]" not in (str(article.get('title', '')))
             ]
-            print(valid_articles)
-            return valid_articles
+            return jsonify(valid_articles), 200  
         else:
-            print(f"Error fetching news: {response.status_code} - {response.text}")
-            return jsonify([]), response.status_code  
+            return jsonify({"error": "Error fetching news"}), response.status_code
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
-        return jsonify([]), 500  
-
+        return jsonify([]), 500 
