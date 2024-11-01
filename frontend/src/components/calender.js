@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, TextField, Button, List, ListItem, IconButton } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import DeleteIcon from '@material-ui/icons/Delete';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, TextField, Button, List, ListItem, IconButton } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import DeleteIcon from '@mui/icons-material/Delete';
 import Footer from './Footer';
+import { Container} from '@mui/material';
 
 const Calender = () => {
   const [sessions, setSessions] = useState([]);
@@ -23,7 +24,19 @@ const Calender = () => {
 
   return (
     <div>
-      {/* Input form for adding a new gym session */}
+    <Container maxWidth="sm" style={{ textAlign: 'center', marginTop: '60px' }}>
+      <Typography
+        component="h1"
+        variant="h2"
+        align="center"
+        color="text.primary"
+        gutterBottom
+      >
+        Schedule your Fitness Goals
+      </Typography>
+      <Typography variant="h5" align="center" color="text.secondary" paragraph>
+      Plan your fitness journey seamlessly by incorporating your gym session dates into our calendar. This feature helps you visualize your schedule and keeps you accountable for your workouts.
+      </Typography>
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography variant="h6">Schedule a New Gym Session</Typography>
@@ -64,7 +77,13 @@ const Calender = () => {
               onChange={(e) => setNewSession({ ...newSession, notes: e.target.value })}
               style={{ marginBottom: '20px' }}
             />
-            <Button variant="contained" color="primary" onClick={handleAddSession}>Add Session</Button>
+            <Button onClick={handleAddSession} variant="contained" sx={{
+                        backgroundColor: 'orange', 
+                        color: '#FFFFFF', 
+                        '&:hover': {
+                            backgroundColor: '#FFAA3D', 
+                        },
+                    }} >Add Session</Button>
           </div>
         </AccordionDetails>
       </Accordion>
@@ -98,8 +117,11 @@ const Calender = () => {
       </Accordion>
 
       <Footer />
-    </div>
+      </Container>
+      </div>
+    
   );
 };
 
 export default Calender;
+
