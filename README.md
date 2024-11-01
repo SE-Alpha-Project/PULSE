@@ -6,37 +6,62 @@
   <h3 align="center">BURNOUT</h3>
   <p align="center">
     Your daily health companion 🏃‍♀️
-    <br />
+    <!-- <br />
     <a href="https://aditikilledar.github.io/burnout-proj3/index.html"><strong>Explore the API docs »</strong></a>
+    <br /> -->
     <br />
-    <br />
-    <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/Tutorials.md">View Demo</a>
+    <a href="https://github.com/J1mmySE24/burnout/blob/main/Tutorials.md">View Demo</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
+    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
+    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
     <br>
-    <a href="https://youtu.be/bYTZT8vcICI">View Video</a>
+    <!-- <a href="https://youtu.be/bYTZT8vcICI">View Video</a> -->
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/Project3Scores.md">Scores</a>
+    <a href="https://github.com/J1mmySE24/burnout/blob/main/Project3Scores.md">Scores</a>
     ·
-    <a href="https://github.com/aditikilledar/burnout-proj3/blob/main/Developer_README.md">Developer Documentation</a>
+    <a href="https://github.com/J1mmySE24/burnout/blob/main/Developer_README.md">Developer Documentation</a>
   </p>
 </div>
 <br>
 
 ---
-
-We forked this repo from this [link](https://github.com/aditikilledar/burnout-proj3)
-
+<!-- We forked this repo from this [link](https://github.com/aditikilledar/burnout-proj3) -->
+[![codecov](https://codecov.io/gh/J1mmySE24/burnout/graph/badge.svg?token=nWtaSvxEU7)](https://codecov.io/gh/J1mmySE24/burnout)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![DOI](https://zenodo.org/badge/865633530.svg)](https://doi.org/10.5281/zenodo.14027128)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Build repo](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml)
+[![Lint Python](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+![GitHub last commit](https://img.shields.io/github/last-commit/J1mmySE24/burnout)
+[![Running Code Coverage](https://github.com/J1mmySE24/burnout/actions/workflows/code_cov.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/code_cov.yml)
+[![Run Tests On Push](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml)
+[![Python application](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml)
+[![Close as a feature](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml)
+<a href="https://github.com/J1mmySE24/burnout/fork" target="blank">
+<img src="https://img.shields.io/github/forks/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
+<img src="https://img.shields.io/github/stars/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp stars"/>
+<a href="https://github.com/J1mmySE24/burnout/issues" target="blank"> <img src="https://img.shields.io/github/issues-closed/J1mmySE24/burnout" alt="burnout-healthgoalsapp issues closed"/>
+</a>
+<a href="https://github.com/J1mmySE24/burnout/graphs/contributors" alt="Contributors">
+<img src="https://img.shields.io/github/contributors/J1mmySE24/burnout" /></a>
+<a href="https://github.com/J1mmySE24/burnout/graphs/commit-activity" alt="commit activity">
+<img src="https://img.shields.io/github/commit-activity/w/J1mmySE24/burnout" /></a> 
+<a href="https://github.com/J1mmySE24/burnout/discussions" alt="discussion">
+<img src="https://img.shields.io/github/discussions/J1mmySE24/burnout" /></a> 
+<a href="https://img.shields.io/github/repo-size/J1mmySE24/burnout" alt="repo size">
+<img src="https://img.shields.io/github/repo-size/J1mmySE24/burnout" /></a>
+---
 ### Team 96
 #### Members
 * Jinming Xing
 * Krisha Patel
 * Shreyas Devaraj
 
-https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438
+<!-- https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438 -->
 
+---
 ### Existing Features
 - **Comprehensive Tracking**: Monitor everything from your diet to calories burned in one place.
 - **Diverse Fitness Events**: Stay engaged with regularly updated fitness events to avoid routine monotony.
@@ -44,7 +69,7 @@ https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9
 - **Community Support**: Connect with a like-minded community to share tips and stay motivated.
 - **Data Security**: Ensure your data remains private and secure.
 
-### Features to Add
+### Features Added
 - **Generative AI-Based Fitness Plan**: Create customized fitness plans using generative AI.
 - **Chatbot Personal Assistant**: Provide a personal assistant chatbot for user guidance.
 - **Food Image Analysis**: Analyze pictures of food items to assess their health impact.
@@ -114,32 +139,6 @@ Overall, the current test suite focuses heavily on security and unauthorized acc
 <img width='600' src="resources/profile.png">
 
 ---
-[![codecov](https://codecov.io/gh/J1mmySE24/burnout/graph/badge.svg?token=nWtaSvxEU7)](https://codecov.io/gh/J1mmySE24/burnout)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![DOI](https://zenodo.org/badge/865633530.svg)](https://doi.org/10.5281/zenodo.14027128)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![Build repo](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml)
-[![Lint Python](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml)
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-![GitHub last commit](https://img.shields.io/github/last-commit/J1mmySE24/burnout)
-[![Running Code Coverage](https://github.com/J1mmySE24/burnout/actions/workflows/code_cov.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/code_cov.yml)
-[![Run Tests On Push](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml)
-[![Python application](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml)
-[![Close as a feature](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml)
-<a href="https://github.com/J1mmySE24/burnout/fork" target="blank">
-<img src="https://img.shields.io/github/forks/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
-<img src="https://img.shields.io/github/stars/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp stars"/>
-<a href="https://github.com/J1mmySE24/burnout/issues" target="blank"> <img src="https://img.shields.io/github/issues-closed/J1mmySE24/burnout" alt="burnout-healthgoalsapp issues closed"/>
-</a>
-<a href="https://github.com/J1mmySE24/burnout/graphs/contributors" alt="Contributors">
-<img src="https://img.shields.io/github/contributors/J1mmySE24/burnout" /></a>
-<a href="https://github.com/J1mmySE24/burnout/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/J1mmySE24/burnout" /></a> 
-<a href="https://github.com/J1mmySE24/burnout/discussions" alt="discussion">
-<img src="https://img.shields.io/github/discussions/J1mmySE24/burnout" /></a> 
-<a href="https://img.shields.io/github/repo-size/J1mmySE24/burnout" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/J1mmySE24/burnout" /></a>
-
 # Table of Contents  
 
 - [Table of Contents](#table-of-contents)
@@ -325,7 +324,7 @@ The application can be extended with features like:
 6. Taking the user's medical history into account.
 7. Finding fitness buddies. (Integrating social media)
    
-   # Contributors
+# Contributors
    
 <center>
   <table>
@@ -333,11 +332,11 @@ The application can be extended with features like:
     <td align="center"><a href="https://github.com/XingJinming-real"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/krishapatel10"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>krisha patel</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/shreyasdvrj"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Shreyas Devaraj</b></sub></a><br /></td>
-        <td align="center"><a href="https://github.com/aiyer786"><img src="https://avatars.githubusercontent.com/u/60314222?s=400&u=0984f88aeb3a9c30f4ec8145176134e626843fd5&v=4" width="100px;" alt=""/><br /><sub><b>Aditya Iyer</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/aditikilledar"><img src="https://avatars.githubusercontent.com/u/73051765?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Killedar</b></sub></a></td>
+        <!-- <td align="center"><a href="https://github.com/aiyer786"><img src="https://avatars.githubusercontent.com/u/60314222?s=400&u=0984f88aeb3a9c30f4ec8145176134e626843fd5&v=4" width="100px;" alt=""/><br /><sub><b>Aditya Iyer</b></sub></a><br /></td> -->
+      <!-- <td align="center"><a href="https://github.com/aditikilledar"><img src="https://avatars.githubusercontent.com/u/73051765?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Killedar</b></sub></a></td>
     <td align="center"><a href="https://github.com/shashank-madan"><img src="https://avatars.githubusercontent.com/u/52149707?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Shashank Madan</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/srina1h"><img src="https://avatars.githubusercontent.com/u/47570142?v=4" width="100px;" alt=""/><br /><sub><b>Srinath Srinivasan</b></sub></a><br /></td>
-    </tr>
+    </tr> -->
   </table>
 </center>
 
