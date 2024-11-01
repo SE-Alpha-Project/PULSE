@@ -151,38 +151,53 @@ function Header(props) {
               </MenuItem>
             </Menu>
           </Box>
-            {/* Twitter Button */}
-            <IconButton
+            {/* TwitterButton */}
+            <Box sx={{ flexGrow: 0, display: "flex"}}>
+              <Button
                 color="inherit"
                 component="a"
                 href="https://twitter.com"
-                target="_blank"
-                // rel="noopener noreferrer"
-            >
-                Twitter
-            </IconButton>
+                sx={{
+                  mr: 2,
+                  display: "block",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >Twitter</Button>
+                </Box>
+
+            <Box sx={{ flexGrow: 0, display: "flex"}}>
 
             {/* Facebook Button */}
-            <IconButton
+            
+              <Button
                 color="inherit"
                 component="a"
                 href="https://facebook.com"
-                target="_blank"
-                // rel="noopener noreferrer"
-            >
-                Facebook
-            </IconButton>
+                sx={{
+                  mr: 2,
+                  display: "block",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >Facebook</Button>
+                
+            </Box>
 
             {/* YouTube Button */}
-            <IconButton
+            <Box sx={{ flexGrow: 0, display: "flex"}}>
+              <Button
                 color="inherit"
                 component="a"
                 href="https://youtube.com"
-                target="_blank"
-                // rel="noopener noreferrer"
-            >
-                Youtube
-            </IconButton>
+                sx={{
+                  mr: 2,
+                  display: "block",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >Youtube</Button>
+                </Box>
         </Toolbar>
       </Container>
     </AppBar>
