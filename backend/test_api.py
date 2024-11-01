@@ -8,10 +8,21 @@ class APITestCase(unittest.TestCase):
     def setUp(self):
         self.app = api
         self.app.config['TESTING'] = True
+        self.app_context = self.app.app_context()
+        self.app_context.push()
+        self.request_context = self.app.test_request_context()
+        self.request_context.push()
         setup_mongo_client(self.app)  # Set up the mongo client after changing the TESTING flag
         self.client = self.app.test_client()
+        self.jwt_token = "test_jwt_token"
         print("Using MongoDB client:", type(self.app.mongo_client)) 
 
+
+    def tearDown(self):
+                # Pop the contexts after tests
+            self.request_context.pop()
+            self.app_context.pop()
+    
     
     def test_get_events(self):
         # Create a mock collection
@@ -239,6 +250,72 @@ class APITestCase(unittest.TestCase):
         response = app_client .get('/myMeals')
 
         self.assertEqual(response.status_code, 401)
+        
+    @patch('base.requests.get')
+    @patch('os.getenv')
+    def test_get_top_resources_success(self, mock_getenv, mock_requests_get):
+        app_client = api.test_client()
+
+        mock_getenv.return_value = 'fake_api_value'
+
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+        'articles': [
+            {'title': 'Fitness Trends 2024'},
+            {'title': 'Nutrition Tips'},
+            {'title': '[Removed] Controversial Article'}
+        ]
+        }
+        mock_requests_get.return_value = mock_response
+    
+        response = app_client.get('/resources')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.json), 2)
+
+    @patch('base.requests.get')
+    @patch('os.getenv')
+    def test_get_top_resources_exception_api_error(self, mock_getenv, mock_requests_get):
+        app_client = api.test_client()
+
+        mock_getenv.return_value = 'fake_api_value'
+
+        mock_response = Mock()
+        mock_response.status_code = 400
+        mock_response.text = 'Bad Request'
+        mock_requests_get.return_value = mock_response
+    
+        response = app_client.get('/resources')
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json, {'error': 'Error fetching news'})
+
+    @patch('base.requests.get') 
+    @patch('os.getenv')
+    def test_get_top_resources_exception(self, mock_getenv, mock_requests_get):
+        app_client = api.test_client()
+        mock_getenv.return_value = 'fake_api_key'
+    
+        mock_requests_get.side_effect = Exception("Network error")
+        response = app_client.get('/resources')
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(response.json, [])
+
+    def test_chatbot_valid_question(self):
+        app_client = api.test_client()
+        response = app_client.post('/chatbot', json={'question': 'What are some benefits of exercise?'})
+        
+        data = response.get_json()
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('answer', data)
+        self.assertNotEqual(data['answer'], "")
+    
+    def test_logout(self):
+        app_client = api.test_client()
+        response = app_client.post('/logout', headers={"Authorization": f"Bearer {self.jwt_token}"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json, {"msg": "logout successful"})
+
+
 
 if __name__ == "__main__":
     unittest.main()

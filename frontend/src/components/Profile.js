@@ -19,11 +19,11 @@ import {
 } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Box from "@mui/material/Box";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
+import WhatshotIcon from "@mui/icons-material/Whatshot"; // Corrected import
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import FitnessPlanCard from "./FitnessPlanCard";
 
 

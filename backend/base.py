@@ -21,6 +21,11 @@ from functools import reduce
 from bson import json_util
 from pymongo import MongoClient
 from flasgger import Swagger
+from llama_index.llms.ollama import Ollama
+import time
+import requests  
+import logging
+import os
 
 from mistralai import Mistral
 
@@ -1309,7 +1314,79 @@ def generate_fitness_plan(user_data):
 
     return chat_response.choices[0].message.content
 
+model = Ollama(model="llama3.2")
 
-# @api.route("/calendar")
-# def calendar():
-#     return render_template("calendar.html")
+@api.route('/chatbot', methods=['POST'])
+def chatbot():
+    data = request.get_json()
+    question = data.get('question')
+    answer = get_model_response(question)
+    
+ 
+    return jsonify({'answer': answer})
+
+
+logging.basicConfig(level=logging.ERROR)
+
+def get_model_response(question):
+    attempts = 3
+    for attempt in range(attempts):
+        try:
+            modified_prompt = "Answer concisely by default. " + question
+            result = model.complete(modified_prompt)
+            print(result) 
+
+            if hasattr(result, 'text'):
+                return result.text.strip()
+            else:
+                return str(result).strip()
+
+        except requests.exceptions.Timeout:
+            logging.error("Timeout error occurred. Retrying...")
+            if attempt < attempts - 1:
+                time.sleep(2)  
+            else:
+                return "Error: Request timed out. Please try again later."
+
+        except requests.exceptions.ConnectionError:
+            logging.error("Connection error occurred. Retrying...")
+            if attempt < attempts - 1:
+                time.sleep(2) 
+            else:
+                return "Error: Network issue. Please check your connection."
+
+        except Exception as e:
+            logging.error(f"An unexpected error occurred: {str(e)}")
+            if attempt < attempts - 1:
+                time.sleep(2)  
+            else:
+                return f"Error: {str(e)}"
+
+           
+@api.route('/resources')
+def get_top_resources():
+    api_key = os.getenv("NEWS_API_KEY")
+    if not api_key:
+        print("Error: NEWS_API_KEY is missing. Please set the API key in the environment.")
+        return jsonify({"error": "API key is missing"}), 500
+
+    url = (
+        'https://newsapi.org/v2/everything?'
+        'q=fitness OR nutrition&'
+        f'apiKey={api_key}'  
+    )
+
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            articles = response.json().get('articles', [])
+            valid_articles = [
+                article for article in articles
+                if "[Removed]" not in (str(article.get('title', '')))
+            ]
+            return jsonify(valid_articles), 200  
+        else:
+            return jsonify({"error": "Error fetching news"}), response.status_code
+    except Exception as e:
+        print(f"Exception occurred: {str(e)}")
+        return jsonify([]), 500 

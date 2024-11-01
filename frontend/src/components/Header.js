@@ -10,12 +10,15 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
+import WhatshotIcon from "@mui/icons-material/Whatshot"; 
 import axios from "axios";
 import useToken from './authentication/useToken';
 import { updateState } from "../burnoutReducer";
 
-const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", 'FAQ': "/faq", 'Contact Us': "/contactus"};
+
+
+
+const mainPages = { Home: "/", Events: "/events" , 'My Meals': "/meals", 'Calender': "/calender", 'Resources' :"/resources", 'FAQ': "/faq", 'Contact Us': "/contactus"};
 const userPages = { Profile: "/profile" };
 
 function Header(props) {
@@ -148,6 +151,38 @@ function Header(props) {
               </MenuItem>
             </Menu>
           </Box>
+            {/* Twitter Button */}
+            <IconButton
+                color="inherit"
+                component="a"
+                href="https://twitter.com"
+                target="_blank"
+                // rel="noopener noreferrer"
+            >
+                Twitter
+            </IconButton>
+
+            {/* Facebook Button */}
+            <IconButton
+                color="inherit"
+                component="a"
+                href="https://facebook.com"
+                target="_blank"
+                // rel="noopener noreferrer"
+            >
+                Facebook
+            </IconButton>
+
+            {/* YouTube Button */}
+            <IconButton
+                color="inherit"
+                component="a"
+                href="https://youtube.com"
+                target="_blank"
+                // rel="noopener noreferrer"
+            >
+                Youtube
+            </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
