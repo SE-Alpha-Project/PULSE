@@ -288,6 +288,18 @@ class APITestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.json, {'error': 'Error fetching news'})
 
+    @patch('base.requests.get') 
+    @patch('os.getenv')
+    def test_get_top_resources_exception(self, mock_getenv, mock_requests_get):
+        app_client = api.test_client()
+        mock_getenv.return_value = 'fake_api_key'
+    
+        mock_requests_get.side_effect = Exception("Network error")
+        response = app_client.get('/resources')
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(response.json, [])
+
+
 
 if __name__ == "__main__":
     unittest.main()
