@@ -299,6 +299,21 @@ class APITestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 500)
         self.assertEqual(response.json, [])
 
+    def test_chatbot_valid_question(self):
+        app_client = api.test_client()
+        response = app_client.post('/chatbot', json={'question': 'What are some benefits of exercise?'})
+        
+        data = response.get_json()
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('answer', data)
+        self.assertNotEqual(data['answer'], "")
+    
+    def test_logout(self):
+        app_client = api.test_client()
+        response = app_client.post('/logout', headers={"Authorization": f"Bearer {self.jwt_token}"})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json, {"msg": "logout successful"})
+
 
 
 if __name__ == "__main__":
