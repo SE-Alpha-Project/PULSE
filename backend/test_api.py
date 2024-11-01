@@ -14,6 +14,7 @@ class APITestCase(unittest.TestCase):
         self.request_context.push()
         setup_mongo_client(self.app)  # Set up the mongo client after changing the TESTING flag
         self.client = self.app.test_client()
+        self.jwt_token = "test_jwt_token"
         print("Using MongoDB client:", type(self.app.mongo_client)) 
 
 
