@@ -24,6 +24,8 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const weightCardStyles = {
   weightContainer: {
@@ -206,8 +208,6 @@ function Profile(props) {
       });
   };
 
-
-
   // Check if a fitness plan exists on component mount
   useEffect(() => {
     axios({
@@ -233,6 +233,8 @@ function Profile(props) {
 
   const handleGeneratePlan = () => {
     setLoading(true);
+    if(age || weight || height || BMI || sex || diet)
+    {
     axios({
       method: 'POST',
       url: '/generateFitnessPlan',
@@ -256,9 +258,25 @@ function Profile(props) {
       .finally(() => {
         setLoading(false);
       });
+    }
+    else 
+    {
+      setLoading(false);
+      toast.error("Please fill at least one of the following: Age, Weight, Height, Sex, or Diet", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   };
   return (
     <>
+      <ToastContainer />
       <Container maxWidth>
         <Box
           sx={{
