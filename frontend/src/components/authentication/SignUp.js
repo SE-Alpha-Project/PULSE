@@ -79,7 +79,7 @@ export default function SignUp() {
         console.log(response)
         if (response.status === 200 & response.data.msg === "register successful") {
           console.log("User created")
-          history.push("/");
+          history.push("/signin");
           userSuccessNotify();
         }
         else if (response.data.msg === "User already exists") {
@@ -194,7 +194,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/" variant="body2">
+                <Link href="/signin" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

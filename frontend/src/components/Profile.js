@@ -261,7 +261,6 @@ function Profile(props) {
     }
     else 
     {
-      setLoading(false);
       toast.error("Please fill at least one of the following: Age, Weight, Height, Sex, or Diet", {
         position: "top-right",
         autoClose: 5000,
