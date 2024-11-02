@@ -1,4 +1,4 @@
-Total sum of Rubrics for repo:  98/105
+Total sum of Rubrics for repo:  101/105
 
 All members contribute equally.
 
