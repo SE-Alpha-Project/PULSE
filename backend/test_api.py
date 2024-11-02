@@ -433,7 +433,37 @@ class APITestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 404)
         self.assertEqual(response.json['status'], "Not Found")
         self.assertIn("message", response.json)
-    
+        
+    def test_add_user_consumed_calories_success(self):
+        test_email = 'user@example.com'
+        app_client = api.test_client()
+        db = self.app.mongo_client['test']
+        collection = db['users']
+        collection.insert_one({
+            "email": test_email,
+            "foodConsumed": []
+        })
+        data = {
+            "intakeDate": "2023-10-17",
+            "intakeFoodItem": "Apple",
+            "intakeCalories": 95
+        }
+
+        token = create_access_token(identity=test_email)
+
+        response = app_client.post(
+            '/caloriesConsumed',
+            headers={'Authorization': f'Bearer {token}'},
+            data=json.dumps(data),
+            content_type='application/json'
+        )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json['status'], "Data saved successfully")
+
+        user_data = collection.find_one({"email": test_email})
+        self.assertIsNotNone(user_data)
+
 
 
 if __name__ == "__main__":
