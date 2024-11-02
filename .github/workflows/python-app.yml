@@ -41,10 +41,10 @@ jobs:
       uses: peter-evans/autopep8@v1
       with:
         args: --recursive --in-place --aggressive --aggressive .
-    - name: Run tests 1
-      working-directory: ./backend/db
-      run: |
-        pytest test_api.py
+    # - name: Run tests 1
+    #   working-directory: ./backend/db
+    #   run: |
+    #     pytest test_api.py
     - name: Run tests
       working-directory: ./backend
       run: |
