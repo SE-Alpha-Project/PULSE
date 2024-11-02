@@ -315,7 +315,7 @@ class APITestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json, {"msg": "logout successful"})
 
-   def test_register_success(self):
+    def test_register_success(self):
         app_client = api.test_client()
         response = app_client.post('/register', json={
             'email': 'test@example.com',
