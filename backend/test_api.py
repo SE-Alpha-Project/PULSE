@@ -2,6 +2,7 @@ import unittest
 from base import api, setup_mongo_client
 from unittest.mock import patch, Mock 
 from flask import json
+from flask_jwt_extended import create_access_token
 
 class APITestCase(unittest.TestCase):
     
