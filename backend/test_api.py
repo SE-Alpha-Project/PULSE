@@ -315,6 +315,124 @@ class APITestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json, {"msg": "logout successful"})
 
+   def test_register_success(self):
+        app_client = api.test_client()
+        response = app_client.post('/register', json={
+            'email': 'test@example.com',
+            'password': 'testpassword',
+            'firstName': 'Test',
+            'lastName': 'User'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'register successful', response.data)
+
+
+
+    def test_logout_success(self):
+        app_client = api.test_client()
+        response = app_client.post('/logout')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'logout successful', response.data)
+    
+    
+    def test_get_events_no_events(self):
+        app_client = api.test_client()
+        response = app_client.get('/events')
+
+        # Assert: Check for a 200 status code and the correct response data
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        self.assertEqual(response_data, [])
+
+
+    
+   
+
+    def test_get_events_with_additional_properties(self):
+        app_client = api.test_client()
+        db = self.app.mongo_client['test']
+        collection = db['events']
+        mock_events = [
+            {"_id": "605c72f44f1a2b3c3c5e4f7f", "name": "Event 1", "date": "2024-01-01", "location": "Location A"},
+            {"_id": "605c72f44f1a2b3c3c5e4f80", "name": "Event 2", "date": "2024-01-02", "location": "Location B"}
+        ]
+        collection.insert_many(mock_events)
+
+
+        response = app_client.get('/events')
+
+
+        response_data = response.get_json()
+        for event in response_data:
+            self.assertIn("location", event) 
+
+
+    def test_get_events_event_format(self):
+        app_client = api.test_client()
+        db = self.app.mongo_client['test']
+        collection = db['events']
+        mock_events = [
+            {"_id": "605c72f44f1a2b3c3c5e4f7f", "name": "Event 1", "date": "2024-01-01"},
+        ]
+        collection.insert_many(mock_events)
+
+        # Act: Make a GET request to the events endpoint
+        response = app_client.get('/events')
+
+        # Assert: Check that the returned format is correct
+        response_data = response.get_json()
+        self.assertIsInstance(response_data, list)  # Ensure the response is a list
+        for event in response_data:
+            self.assertIsInstance(event, dict)  # Ensure each event is a dictionary
+            self.assertIn("_id", event)  # Check for _id
+            self.assertIn("name", event)  # Check for name
+            self.assertIn("date", event)  # Check for date
+
+    def test_get_events_multiple_event_types(self):
+        app_client = api.test_client()
+        db = self.app.mongo_client['test']
+        collection = db['events']
+        mock_events = [
+            {"_id": "605c72f44f1a2b3c3c5e4f7f", "name": "Music Concert", "date": "2024-01-01", "type": "concert"},
+            {"_id": "605c72f44f1a2b3c3c5e4f80", "name": "Art Exhibition", "date": "2024-01-02", "type": "exhibition"},
+            {"_id": "605c72f44f1a2b3c3c5e4f81", "name": "Tech Conference", "date": "2024-01-03", "type": "conference"}
+        ]
+        collection.insert_many(mock_events)
+
+        # Act: Make a GET request to the events endpoint
+        response = app_client.get('/events')
+
+        # Assert: Check that all events are returned
+        response_data = response.get_json()
+        self.assertEqual(len(response_data), 3)  # Ensure all events are returned
+
+        # Check for different event types
+        types_found = {event["type"] for event in response_data}
+        self.assertIn("concert", types_found)
+        self.assertIn("exhibition", types_found)
+        self.assertIn("conference", types_found)
+
+
+    @patch('base.get_jwt_identity')  # Mock JWT identity
+    def test_get_fitness_plan_not_found(self, mock_get_jwt_identity):
+        app_client = api.test_client()
+        db = self.app.mongo_client['test']
+        collection = db['users']
+        mock_get_jwt_identity.return_value = 'user@example.com'
+        
+        # Mock the database call to return None (user not found)
+        collection.find_one = Mock(return_value=None) 
+
+        
+        token = create_access_token(identity='user@example.com')
+
+        response = app_client.get('/getFitnessPlan', headers={"Authorization": f"Bearer {token}"})
+
+        # Assert
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.json['status'], "Not Found")
+        self.assertIn("message", response.json)
+    
 
 
 if __name__ == "__main__":
