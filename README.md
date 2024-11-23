@@ -3,7 +3,7 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="https://github.com/aditikilledar/burnout-proj3/assets/52149707/77028411-c5e2-4c30-a200-992aa12be968" alt="Logo" width="120" height="120">
   </a>
-  <h3 align="center">BURNOUT</h3>
+  <h3 align="center">PULSE</h3>
   <p align="center">
     Your daily health companion 🏃‍♀️
     <!-- <br />
@@ -56,11 +56,11 @@
 <a href="https://img.shields.io/github/repo-size/J1mmySE24/burnout" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/J1mmySE24/burnout" /></a>
 ---
-### Team 96
+### Team 10
 #### Members
-* Jinming Xing
-* Krisha Patel
-* Shreyas Devaraj
+* Chaitralee Datar	
+* Ananya Patankar	
+* Yash Shah
 
 <!-- https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438 -->
 
@@ -68,8 +68,8 @@
 # Table of Contents  
 
 - [Table of Contents](#table-of-contents)
-  - [**🔥 Burnout: Elevate Your Health \& Fitness Game! 🔥**](#-burnout-elevate-your-health--fitness-game-)
-- [**💡 Why Choose Burnout?**](#-why-choose-burnout)
+  - [**🔥 PULSE: Elevate Your Health \& Fitness Game! 🔥**](#-burnout-elevate-your-health--fitness-game-)
+- [**💡 Why Choose PULSE?**](#-why-choose-burnout)
 - [Walkthrough](#walkthrough)
 - [Application Screenshots](#application-screenshots)
   - [Landing](#landing)
@@ -102,28 +102,28 @@
 - [License](#license)
 
 
-## **🔥 Burnout: Elevate Your Health & Fitness Game! 🔥**
+## **🔥 PULSE: Elevate Your Health & Fitness Game! 🔥**
  
-Are you determined to achieve your dream physique? Desiring to take charge of your health? Looking for a platform that offers everything from calorie counting to enrolling in exciting fitness events? Welcome to **Burnout** – the only health and fitness companion you'll ever need.
+Are you determined to achieve your dream physique? Desiring to take charge of your health? Looking for a platform that offers everything from calorie counting to enrolling in exciting fitness events? Welcome to **PULSE** – the only health and fitness companion you'll ever need.
  
 - **🍎 Nutrition Made Simple:**
-Navigating the complex world of nutrition can be daunting. With Burnout, you can effortlessly track what you eat and gain insights into your calorie consumption. Whether you're having a quick salad or indulging in a cheat meal, every bite counts. And we're here to count it for you!
+Navigating the complex world of nutrition can be daunting. With PULSE, you can effortlessly track what you eat and gain insights into your calorie consumption. Whether you're having a quick salad or indulging in a cheat meal, every bite counts. And we're here to count it for you!
  
 - **🔥 Ignite Your Calorie Burn:**
-Exercise isn't just about looking good; it's about feeling good too. Track every step taken, every calorie burned, and every drop of sweat shed. Watch yourself progress as Burnout pushes you to achieve your health goals.
+Exercise isn't just about looking good; it's about feeling good too. Track every step taken, every calorie burned, and every drop of sweat shed. Watch yourself progress as PULSE pushes you to achieve your health goals.
  
 - **🏊 Dive into Exciting Fitness Events:**
 Bored of your routine workout? Dive into an array of fitness events – from calming yoga sessions to adrenaline-pumping gym workouts. Whether you're into swimming, walking, or exploring new activities, there's something for everyone. Get social, challenge yourself, and discover activities you love.
  
 - **📊 Tailored To You:**
-Everyone's health journey is unique. Input your age, current weight, height, target weight, and goals, and let Burnout craft a personalized plan for you. Watch in real-time as you inch closer to your goals and celebrate each milestone with us.
+Everyone's health journey is unique. Input your age, current weight, height, target weight, and goals, and let PULSE craft a personalized plan for you. Watch in real-time as you inch closer to your goals and celebrate each milestone with us.
   
-So, are you ready to take the leap towards a healthier, happier you? Dive into **Burnout** now and elevate your fitness game!
+So, are you ready to take the leap towards a healthier, happier you? Dive into **PULSE** now and elevate your fitness game!
  
 🔥 *Because it's not just about burning calories; it's about burning doubts, burning procrastination, and lighting up confidence!* 🔥
 
 
-# **💡 Why Choose Burnout?**
+# **💡 Why Choose PULSE?**
  
 - **Comprehensive Tracking:** From what you eat to how much you burn, monitor everything in one place.
   
@@ -135,12 +135,12 @@ So, are you ready to take the leap towards a healthier, happier you? Dive into *
   
 - **Security:** Your data is precious, and we guard it like our own. Rest assured, your information stays private and secure.
  
-In today's fast-paced world, maintaining health is a challenge. But with the right tools and community, this challenge becomes an enjoyable journey. And Burnout is here to make sure of that.
+In today's fast-paced world, maintaining health is a challenge. But with the right tools and community, this challenge becomes an enjoyable journey. And PULSE is here to make sure of that.
 
 
 # Walkthrough
 
-Link to the implementation video of the BurnOut application: [Video](https://drive.google.com/file/d/1UlaIKC_3sxjySAmIVvCIVoci0tKdaqf4/view?usp=drive_link)
+Link to the implementation video of the PULSE application: [Video](https://drive.google.com/file/d/1UlaIKC_3sxjySAmIVvCIVoci0tKdaqf4/view?usp=drive_link)
 
 
 # Application Screenshots
@@ -207,7 +207,7 @@ Before you begin, make sure you have the following installed:
  Step 1: 
   Git Clone the Repository 
   
-    git clone https://github.com/J1mmySE24/burnout
+    git clone https://github.com/chaitraleedatar/PULSE.git
 
 Step 2:
    Ensure mongodb is running and execute the below to populate the tables:
