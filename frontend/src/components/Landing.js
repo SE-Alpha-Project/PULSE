@@ -52,7 +52,8 @@ const LandingPage = () => {
           >
             PULSE is your daily health companion, designed to help you achieve your wellness goals.
           </Typography>
-          <Button
+         < a href='/signin'>
+          <Button 
             variant="contained"
             color="primary"
             size="large"
@@ -66,6 +67,7 @@ const LandingPage = () => {
           >
             Join Now
           </Button>
+          </a>
         </Container>
       </Box>
 
