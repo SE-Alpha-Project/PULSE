@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Fill } from './nav';
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
+import dumbbell from "./assets/img/dumbbell.png";
 
 export default class Navbar extends Component {
   render() {
@@ -10,8 +10,13 @@ export default class Navbar extends Component {
           
             <div className="brand">
               <a href='/'>
-                <LocalFireDepartmentIcon fontSize="large" className="fire-icon" />
-                <span>BURNOUT</span>
+                <img 
+                  src={dumbbell}
+                  alt="Custom Icon" 
+                  style={{ width: '50px', height: '50px' }} // Adjust size as needed
+                  className="fire-icon" // Keep your existing class if needed
+                />
+                <span>PULSE</span>
               </a>
             </div>
             <div className="auth-links">

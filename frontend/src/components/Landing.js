@@ -9,6 +9,7 @@ const LandingPage = () => {
     <>
       {/* Navbar */}
       <Navbar />
+      
 
       {/* Hero Section */}
       <Box
@@ -23,6 +24,7 @@ const LandingPage = () => {
           color: "white",
           textAlign: "center",
           position: "relative",
+          
         }}
       >
         <Box
@@ -32,10 +34,12 @@ const LandingPage = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay for better readability
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+             // Dark overlay for better readability
+            
           }}
         />
-        <Container sx={{ position: "relative", zIndex: 2 }}>
+        <Container sx={{ position: "relative", zIndex: 2,}}>
           <Typography variant="h2" component="h1" sx={{ fontWeight: "bold" }}>
             Get Fit with Us!
           </Typography>
@@ -48,6 +52,7 @@ const LandingPage = () => {
               maxWidth: "600px",
               marginX: "auto",
               fontSize: "1.2rem",
+              
             }}
           >
             PULSE is your daily health companion, designed to help you achieve your wellness goals.
@@ -81,6 +86,7 @@ const LandingPage = () => {
               fontWeight: "bold",
               textAlign: "center",
               mb: 4,
+              
             }}
           >
             Why Choose PULSE?

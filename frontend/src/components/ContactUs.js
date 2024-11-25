@@ -31,12 +31,12 @@ const ContactUs = (props) => {
           Contact Us
         </Typography>
         <Typography variant="h5" align="justify" color="text.primary" paragraph>
-          Use the email below to contact the BurnOut development team. Feel free to reach out to us for any questions, feedback, or inquiries.
+          Use the email below to contact the Pulse development team. Feel free to reach out to us for any questions, feedback, or inquiries.
           <br></br><br></br>
           Fill out the form below to send us an email.
         </Typography>
         <Typography variant="h6" style={{ marginTop: '20px' }}>
-          Email: <Link href="team96.se@gmail.com">team96.se@gmail.com</Link>
+          Email: <Link href="group10.se@gmail.com">group10.se@gmail.com</Link>
         </Typography>
         <Typography variant="h6" color="text.secondary" style={{ marginTop: '20px' }}>
           We will respond to you as soon as we can!
@@ -72,7 +72,7 @@ const ContactUs = (props) => {
             type="submit"
             variant="contained"
             color="primary"
-            style={{ marginTop: '20px', backgroundColor: 'orange', color: 'white' }}
+            style={{ marginTop: '20px', backgroundColor: '#1976d2', color: 'white' }}
           >
             Submit
           </Button >

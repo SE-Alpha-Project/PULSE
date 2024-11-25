@@ -50,12 +50,15 @@ function Profile(props) {
   const [weightUnit, setWUnit] = useState("lbs");
   const [heightUnit, setHUnit] = useState("ft");
   const [prevSelectionUnit, setPrevUnit] = useState("imperial");
+  const [profilePic, setProfilePic] = useState(null); // State for profile picture
+
 
   const handleSaveInput = (e) => {
     console.log(editableWeight, editableTargetCalories, editableActivityLevel)
     settargetWeight(editableWeight);
     setTargetCalories(editableTargetCalories);
     setActivityLevel(editableActivityLevel);
+    setProfilePic(profilePic)
     console.log(targetWeight, currentTargetCalories, activityLevel)
     if (units === "metric") {
       postWeight = (parseFloat(editableWeight) * 2.20462).toFixed(2);
@@ -72,6 +75,7 @@ function Profile(props) {
         targetWeight: postWeight,
         targetCalories: editableTargetCalories,
         activityLevel: editableActivityLevel,
+        profilePic: profilePic,
       },
     })
       .then((response) => {
@@ -184,6 +188,7 @@ function Profile(props) {
         Authorization: "Bearer " + props.state.token,
       },
       data: {
+        profilePic: profilePic,
         firstName: firstName,
         lastName: lastName,
         age: age,
@@ -207,6 +212,14 @@ function Profile(props) {
         }
       });
   };
+  const handleProfilePicChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setProfilePic(URL.createObjectURL(file)); // Create a URL for the uploaded image
+    }
+  };
+
+
 
   // Check if a fitness plan exists on component mount
   useEffect(() => {
@@ -297,21 +310,44 @@ function Profile(props) {
                 flexDirection: "column",
               }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  paddingBottom: "5px",
-                }}
-              >
-                <Avatar sx={{ width: 100, height: 100 }}>
-                  <AccountCircleIcon sx={{ width: 70, height: 70 }} />
-                </Avatar>
-                <Typography variant="h5" mt={2}>
-                  Profile
-                </Typography>
+               <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Avatar 
+          src={profilePic ? profilePic : undefined} 
+          sx={{ width: 100, height: 100 }} 
+        >
+          {!profilePic && <AccountCircleIcon sx={{ width: 70, height: 70 }} />}
+        </Avatar>
+        <br></br>
+       
+        <Box mb={2} sx={{ display: 'flex', alignItems: 'center' }}>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleProfilePicChange}
+            style={{ display: 'none' }} // Hide the default file input
+            id="profile-pic-input"
+          />
+          <label htmlFor="profile-pic-input">
+            <Button variant="contained" component="span" color="primary">
+              Upload 
+            </Button>
+          </label>
+          {/* Remove button */}
+          {profilePic && (
+            <Button 
+              variant="outlined" 
+              color="secondary" 
+              onClick={() => setProfilePic(null)} // Remove profile picture
+              sx={{ marginLeft: 2 }} // Add some space between buttons
+            >
+              Remove 
+            </Button>
+          )}
+        </Box>
+        <Typography variant="h5" mt={2}>
+          Profile
+        </Typography>
+        <br></br>
               </Box>
               <Box mb={2}>
                 <TextField
@@ -401,7 +437,7 @@ function Profile(props) {
                   </Select>
                 </FormControl>
               </Box>
-              <Button variant="contained" color="primary" style={{ backgroundColor: 'orange' }} onClick={handleProfileSubmit}>
+              <Button variant="contained" color="primary" style={{ backgroundColor: '#1976d2' }} onClick={handleProfileSubmit}>
                 Update
               </Button>
             </CardContent>
@@ -429,7 +465,7 @@ function Profile(props) {
                 <CardContent>
                   <div style={weightCardStyles.weightContainer}>
                     <IconButton
-                      style={{ color: 'orange' }}
+                      style={{ color: '#1976d2' }}
                       aria-label="weighing scale icon"
                     >
                       <FitnessCenterIcon fontSize="large" />
@@ -454,7 +490,7 @@ function Profile(props) {
                 <CardContent>
                   <div style={weightCardStyles.weightContainer}>
                     <IconButton
-                      style={{ color: 'orange' }}
+                      style={{ color: '#1976d2' }}
                       aria-label="running icon"
                     >
                       <DirectionsRunIcon fontSize="large" />
@@ -488,7 +524,7 @@ function Profile(props) {
                 <CardContent>
                   <div style={weightCardStyles.weightContainer}>
                     <IconButton
-                      style={{ color: 'orange' }}
+                      style={{ color: '#1976d2' }}
                       aria-label="calories icon"
                     >
                       <WhatshotIcon fontSize="large" />
@@ -510,7 +546,7 @@ function Profile(props) {
               <Button
                 sx={{ gridArea: "saveButton" }}
                 variant="contained"
-                style={{ backgroundColor: 'orange' }}
+                style={{ backgroundColor: '#1976d2' }}
                 color="primary"
                 onClick={handleSaveInput}
                 maxWidth
@@ -545,7 +581,7 @@ function Profile(props) {
               <Button
                 variant="contained"
                 color="primary"
-                style={{ backgroundColor: 'orange' }}
+                style={{ backgroundColor: '#1976d2' }}
                 onClick={handleGeneratePlan}
                 disabled={loading}
               >

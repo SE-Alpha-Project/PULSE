@@ -205,7 +205,7 @@ export default function Meals(props) {
                       type="number"
                       required
                     />
-                    <Button type="submit" variant="contained" size="large" style={{ backgroundColor: 'orange', color: 'white' }}>
+                    <Button type="submit" variant="contained" size="large" style={{ backgroundColor: '#1976d2', color: 'white' }}>
                       Create Food
                     </Button>
                   </Box>
@@ -289,7 +289,7 @@ export default function Meals(props) {
                       </Select>
                     </FormControl>
                   </Box>
-                  <Button type="submit" variant="contained" size="large" style={{ backgroundColor: 'orange', color: 'white' }}>
+                  <Button type="submit" variant="contained" size="large" style={{ backgroundColor: '#1976d2', color: 'white' }}>
                     Create Meal
                   </Button>
 

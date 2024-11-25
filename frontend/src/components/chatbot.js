@@ -26,7 +26,7 @@ const ChatbotComponent = () => {
                 onClick={toggleChatbot} 
                 variant="contained" 
                 style={{
-                    backgroundColor: 'orange', 
+                    backgroundColor: '#1976d2', 
                     color: 'white',
                     borderRadius: '50%',
                     width: '60px',
