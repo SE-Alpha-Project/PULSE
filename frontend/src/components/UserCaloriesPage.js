@@ -461,7 +461,7 @@ const handleDownload = () => {
                       maxDate={dayjs()}
                       required
                     />
-                    <Button type="submit" variant="contained" size="large" style={{ backgroundColor: 'orange', color: 'white' }}>
+                    <Button type="submit" variant="contained" size="large" style={{ backgroundColor: '#1976d2', color: 'white' }}>
                       Add
                     </Button>
                   </Box>
@@ -499,7 +499,7 @@ const handleDownload = () => {
                       <div>{eventObj.date}</div>
                       <Button
         variant="contained"
-        style={{ backgroundColor: 'orange' }}
+        style={{ backgroundColor: '#1976d2' }}
         onClick={() => handleUnenroll(eventObj.eventName)}  // Replace `eventName` with the actual property name if different
       >
         Unenroll
@@ -509,7 +509,7 @@ const handleDownload = () => {
                 })}
               </List>
               {events && events.length > 0 && (
-        <Button variant="contained" style={{ backgroundColor: 'orange' }} onClick={handleDownload}>
+        <Button variant="contained" style={{ backgroundColor: '#1976d2' }} onClick={handleDownload}>
           Download .ics
         </Button>
       )}
@@ -577,7 +577,7 @@ const handleDownload = () => {
                     maxDate={dayjs()}
                     required
                   />
-                  <Button type="submit" variant="contained" size="large" style={{ backgroundColor: 'orange', color: 'white' }}>
+                  <Button type="submit" variant="contained" size="large" style={{ backgroundColor: '#1976d2', color: 'white' }}>
                     Add
                   </Button>
                 </Box>

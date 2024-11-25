@@ -78,7 +78,7 @@ const Calender = () => {
               style={{ marginBottom: '20px' }}
             />
             <Button onClick={handleAddSession} variant="contained" sx={{
-                        backgroundColor: 'orange', 
+                        backgroundColor: '#1976d2', 
                         color: '#FFFFFF', 
                         '&:hover': {
                             backgroundColor: '#FFAA3D', 
