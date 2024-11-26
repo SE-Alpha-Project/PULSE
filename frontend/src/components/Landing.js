@@ -15,7 +15,7 @@ const LandingPage = () => {
         <section>
           <h1>Get fit with us!</h1>
           <p>
-            Burnout is your daily health companion, designed to help users achieve their wellness goals
+            PULSE is your daily health companion, designed to help users achieve their wellness goals
           </p>
         </section>
       </Image>
@@ -25,8 +25,8 @@ const LandingPage = () => {
         <Call>
           <h1>CSC 510 Software Engineering</h1>
           <p>
-            Project 2 : Team 96<br/>
-            Jinming Xing | Krisha Patel | Shreyas Devaraj
+            Project 3 : Team 10<br/>
+            Chaitralee Datar | Ananya Patankar | Yash Shah
           </p>
         </Call>
       </Main>

@@ -79,7 +79,7 @@ function Header(props) {
                 paddingLeft: "10px",
               }}
             >
-              BurnOut
+              PULSE
             </Typography>
           </Box>
           <Box sx={{ flexGrow: 1, display: "flex" }}>

@@ -11,7 +11,7 @@ export default class Navbar extends Component {
             <div className="brand">
               <a href='/'>
                 <LocalFireDepartmentIcon fontSize="large" className="fire-icon" />
-                <span>BURNOUT</span>
+                <span>PULSE</span>
               </a>
             </div>
             <div className="auth-links">
