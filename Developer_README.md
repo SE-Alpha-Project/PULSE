@@ -4,7 +4,7 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="https://github.com/aditikilledar/burnout-proj3/assets/52149707/77028411-c5e2-4c30-a200-992aa12be968" alt="Logo" width="120" height="120">
   </a>
-  <h3 align="center">BURNOUT</h3>
+  <h3 align="center">PULSE</h3>
   <p align="center">
     Your daily health companion 🏃‍♀️
     <br />
@@ -189,9 +189,9 @@ We fixed many bugs, but here are the most notable ones...
  <center>
   <table>
     <tr>
-        <td align="center"><a href="https://github.com/XingJinming-real"><img src="https://avatars.githubusercontent.com/u/64783524?v=4" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/krishapatel10"><img src="https://avatars.githubusercontent.com/u/99911043?v=4" width="100px;" alt=""/><br /><sub><b>Krisha Patel</b></sub></a></td>
-    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="https://avatars.githubusercontent.com/u/57234787?v=4" width="100px;" alt=""/><br /><sub><b>Shreyas Devarak</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/XingJinming-real"><img src="https://avatars.githubusercontent.com/u/64783524?v=4" width="100px;" alt=""/><br /><sub><b>Chaitralee Datar</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/krishapatel10"><img src="https://avatars.githubusercontent.com/u/99911043?v=4" width="100px;" alt=""/><br /><sub><b>Ananya Patankar</b></sub></a></td>
+    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="https://avatars.githubusercontent.com/u/57234787?v=4" width="100px;" alt=""/><br /><sub><b>Yash Shah</b></sub></a><br /></td>
     </tr>
   </table>
 </center>

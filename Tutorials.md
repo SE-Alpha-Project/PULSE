@@ -1,6 +1,6 @@
-**📚 Welcome to the Burnout Tutorials Page! 📚**
+**📚 Welcome to the PULSE Tutorials Page! 📚**
 
-Hey there, fitness enthusiast! 🌟 Dive deep into the intricacies of Burnout with our mini tutorials. Whether you're a beginner just embarking on your health journey or a seasoned user looking to explore advanced features, our step-by-step guides have got you covered. Discover tips, tricks, and best practices to make the most out of Burnout. Let's get started and elevate your health and fitness game together! 💪🔥
+Hey there, fitness enthusiast! 🌟 Dive deep into the intricacies of PULSE with our mini tutorials. Whether you're a beginner just embarking on your health journey or a seasoned user looking to explore advanced features, our step-by-step guides have got you covered. Discover tips, tricks, and best practices to make the most out of PULSE. Let's get started and elevate your health and fitness game together! 💪🔥
 
 ### SignUp and Sign In
 ![ezgif com-video-to-gif](https://github.com/aditikilledar/dollar_bot_SE23/assets/60314222/ff169ddc-90ba-4c9a-a1a9-bc8e0649898b)
