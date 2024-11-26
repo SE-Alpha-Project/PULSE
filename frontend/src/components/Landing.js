@@ -15,7 +15,7 @@ const LandingPage = () => {
         <section>
           <h1>Get fit with us!</h1>
           <p>
-            PULSE is your daily health companion, designed to help users achieve their wellness goals
+            PULSE is your daily health ion, designed to help users achieve their wellness goals
           </p>
         </section>
       </Image>

@@ -6,7 +6,7 @@
   </a>
   <h3 align="center">PULSE</h3>
   <p align="center">
-    Your daily health companion 🏃‍♀️
+    Experience life the healthy way!🏃‍♀️
     <br />
     <a href="https://aditikilledar.github.io/burnout-proj3/index.html"><strong>Explore the API docs »</strong></a>
     <br />

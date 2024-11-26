@@ -68,7 +68,7 @@
 # Table of Contents  
 
 - [Table of Contents](#table-of-contents)
-  - [**🔥 PULSE: Experience a Healthy Lifestyle! 🔥**](#-burnout-elevate-your-health--fitness-game-)
+  - [**🔥 PULSE: Experience life the healthy way! 🔥**](#-burnout-elevate-your-health--fitness-game-)
 - [**💡 Why Choose PULSE?**](#-why-choose-burnout)
 - [Walkthrough](#walkthrough)
 - [Application Screenshots](#application-screenshots)
