@@ -238,6 +238,11 @@ Step 2:
  Step 5:
     Open the URL in your browser:  
       http://127.0.0.1:3000
+      
+ Step 6:
+   Compose and run the docker image:
+   
+    docker-compose up --build  
 
 #### Note
 - Additionally, to utilize the chatbot, you need to have [Ollama](https://ollama.com/library/llama3.2) (with llama 3.2 Model) running locally on your machine. 
