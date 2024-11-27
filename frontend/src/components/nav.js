@@ -13,6 +13,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 6px rgba(192, 169, 168, 0.5);
+  
 
   div {
     display: flex;
@@ -43,7 +44,7 @@ export const Container = styled.div`
       text-decoration: none;
       color: #544b3f;
       &:hover {
-        color: orange;
+        color: #1976d2;
       }
 
       .fire-icon {
@@ -70,7 +71,7 @@ export const Container = styled.div`
       transition: color 0.2s;
 
       &:hover {
-        color: orange;
+        color: #1976d2;
       }
     }
   }

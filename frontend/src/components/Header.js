@@ -56,7 +56,7 @@ function Header(props) {
   }
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#FFA100' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#1976d2', background: 'linear-gradient(135deg, #00c6ff, #0072ff)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box>
@@ -80,6 +80,7 @@ function Header(props) {
               }}
             >
               PULSE
+
             </Typography>
           </Box>
           <Box sx={{ flexGrow: 1, display: "flex" }}>
@@ -99,10 +100,60 @@ function Header(props) {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+        
+
+            {/* TwitterButton */}
+            <Box sx={{ flexGrow: 0, display: "flex"}}>
+              <Button
+                color="inherit"
+                component="a"
+                href="https://twitter.com"
+                sx={{
+                  mr: 2,
+                  display: "block",
+                  color: "white",
+                  textDecoration: "none",
+                  marginLeft:"50px"
+                }}
+              >Twitter</Button>
+                </Box>
+
+            <Box sx={{ flexGrow: 0, display: "flex"}}>
+
+            {/* Facebook Button */}
+            
+              <Button
+                color="inherit"
+                component="a"
+                href="https://facebook.com"
+                sx={{
+                  mr: 2,
+                  display: "block",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >Facebook</Button>
+                
+            </Box>
+
+            {/* YouTube Button */}
+            <Box sx={{ flexGrow: 0, display: "flex"}}>
+              <Button
+                color="inherit"
+                component="a"
+                href="https://youtube.com"
+                sx={{
+                  mr: 2,
+                  display: "block",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >Youtube</Button>
+                </Box>
+                <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar />
+              <Avatar src={props.profilePic ? props.profilePic : undefined} ></Avatar>
               </IconButton>
             </Tooltip>
             <Menu
@@ -147,57 +198,11 @@ function Header(props) {
                   }}
                 >
                   {"Logout"}
+                  
                 </Typography>
               </MenuItem>
             </Menu>
           </Box>
-            {/* TwitterButton */}
-            <Box sx={{ flexGrow: 0, display: "flex"}}>
-              <Button
-                color="inherit"
-                component="a"
-                href="https://twitter.com"
-                sx={{
-                  mr: 2,
-                  display: "block",
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >Twitter</Button>
-                </Box>
-
-            <Box sx={{ flexGrow: 0, display: "flex"}}>
-
-            {/* Facebook Button */}
-            
-              <Button
-                color="inherit"
-                component="a"
-                href="https://facebook.com"
-                sx={{
-                  mr: 2,
-                  display: "block",
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >Facebook</Button>
-                
-            </Box>
-
-            {/* YouTube Button */}
-            <Box sx={{ flexGrow: 0, display: "flex"}}>
-              <Button
-                color="inherit"
-                component="a"
-                href="https://youtube.com"
-                sx={{
-                  mr: 2,
-                  display: "block",
-                  color: "white",
-                  textDecoration: "none",
-                }}
-              >Youtube</Button>
-                </Box>
         </Toolbar>
       </Container>
     </AppBar>
