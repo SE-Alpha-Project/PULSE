@@ -112,7 +112,7 @@ const LandingPage = () => {
             component="p"
             sx={{ textAlign: "center", mb: 1 }}
           >
-            PULSE: Experience a Healthy Lifestyle!
+            PULSE: Elevate Your Health & Fitness Game!
           </Typography>
           <Typography variant="body2" component="p" sx={{ textAlign: "center" }}>
             Ananya Patankar | Yash Shah | Chaitralee Datar
