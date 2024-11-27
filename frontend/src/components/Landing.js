@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, Button, Typography, Container, Grid } from "@mui/material";
 import Navbar from "./Navbar";
-import landingImage from "./assets/img/landingImage.jpg";
+import landingImage from "./assets/img/landingImage.png";
+import lI from "./assets/img/landingImage.jpg";
 import Feature from "./Features";
 
 const LandingPage = () => {
@@ -77,7 +78,8 @@ const LandingPage = () => {
       </Box>
 
       {/* Features Section */}
-      <Box sx={{ py: 6, backgroundColor: "#f9f9f9" }}>
+      <Box sx={{ py: 6, backgroundColor: "#f9f9f9", backgroundImage: `url(${lI})`,
+          backgroundSize: "cover",}}>
         <Container>
           <Typography
             variant="h4"
