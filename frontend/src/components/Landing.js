@@ -53,7 +53,7 @@ const LandingPage = () => {
               maxWidth: "600px",
               marginX: "auto",
               fontSize: "1.2rem",
-              
+              color: "white",
             }}
           >
             PULSE is your daily health companion, designed to help you achieve your wellness goals.
