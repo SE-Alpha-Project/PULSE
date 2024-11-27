@@ -1,7 +1,7 @@
 <br />
 <div  align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/aditikilledar/burnout-proj3/assets/52149707/77028411-c5e2-4c30-a200-992aa12be968" alt="Logo" width="120" height="120">
+    <img src="https://github.com/SE-Alpha-Project/PULSE/blob/develop/frontend/public/assets/img/pulse.jpg" alt="Logo" width="120" height="120">
   </a>
   <h3 align="center">PULSE</h3>
   <p align="center">
