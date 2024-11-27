@@ -124,16 +124,16 @@ const Feature = () => {
       <FeedbackContainer>
   <FeedbackTitle>User Feedback</FeedbackTitle>
   <FeedbackItem>
-    <FeedbackImage src="https://via.placeholder.com/50" alt="User 1" />
-    <FeedbackText>"This app has transformed my fitness journey!" - User 1</FeedbackText>
+    <FeedbackImage src="https://static.vecteezy.com/system/resources/previews/020/911/740/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="User 1" />
+    <FeedbackText>"This app has transformed my fitness journey!" - Chaitralee Datar</FeedbackText>
   </FeedbackItem>
   <FeedbackItem>
-    <FeedbackImage src="https://via.placeholder.com/50" alt="User 2" />
-    <FeedbackText>"I love the calorie counting feature!" - User 2</FeedbackText>
+    <FeedbackImage src="https://static.vecteezy.com/system/resources/previews/020/911/740/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="User 2" />
+    <FeedbackText>"I love the calorie counting feature!" - Ananya Patankar</FeedbackText>
   </FeedbackItem>
   <FeedbackItem>
-    <FeedbackImage src="https://via.placeholder.com/50" alt="User 3" />
-    <FeedbackText>"The custom diet plans are a game changer!" - User 3</FeedbackText>
+    <FeedbackImage src="https://static.vecteezy.com/system/resources/previews/020/911/740/non_2x/user-profile-icon-profile-avatar-user-icon-male-icon-face-icon-profile-icon-free-png.png" alt="User 3" />
+    <FeedbackText>"The custom diet plans are a game changer!" - Yash Shah</FeedbackText>
   </FeedbackItem>
 </FeedbackContainer>
     </Section>
