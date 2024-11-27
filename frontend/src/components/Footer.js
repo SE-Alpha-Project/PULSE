@@ -11,7 +11,7 @@ function Copyright() {
         <Typography variant="body2" color="text.secondary">
             {'Copyright © '}
             {new Date().getFullYear()}{' '}
-            Jinming Xing, Krisha Patel, Shreyas Devaraj
+            Ananya Patankar, Yash Shah, Chaitralee Datar
         </Typography>
     );
 }
