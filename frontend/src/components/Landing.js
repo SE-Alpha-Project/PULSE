@@ -53,7 +53,7 @@ const LandingPage = () => {
               maxWidth: "600px",
               marginX: "auto",
               fontSize: "1.2rem",
-              
+              color: "white",
             }}
           >
             PULSE is your daily health companion, designed to help you achieve your wellness goals.
@@ -78,8 +78,7 @@ const LandingPage = () => {
       </Box>
 
       {/* Features Section */}
-      <Box sx={{ py: 6, backgroundColor: "#f9f9f9", backgroundImage: `url(${lI})`,
-          backgroundSize: "cover",}}>
+      <Box sx={{ py: 6, backgroundColor: "black",}}>
         <Container>
           <Typography
             variant="h4"
@@ -88,6 +87,7 @@ const LandingPage = () => {
               fontWeight: "bold",
               textAlign: "center",
               mb: 4,
+              color: "white",
               
             }}
           >
