@@ -34,6 +34,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/865633530.svg)](https://doi.org/10.5281/zenodo.14027128)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c85cdbb1-69cb-40dc-9717-deb52d6a5f55/deploy-status)](https://app.netlify.com/sites/pulse-workout/deploys)
 [![Build repo](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml)
 [![Lint Python](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
@@ -42,6 +43,7 @@
 [![Run Tests On Push](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml)
 [![Python application](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml)
 [![Close as a feature](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml)
+
 <a href="https://github.com/J1mmySE24/burnout/fork" target="blank">
 <img src="https://img.shields.io/github/forks/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
 <img src="https://img.shields.io/github/stars/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp stars"/>
@@ -236,6 +238,11 @@ Step 2:
  Step 5:
     Open the URL in your browser:  
       http://127.0.0.1:3000
+      
+ Step 6:
+   Compose and run the docker image:
+   
+    docker-compose up --build  
 
 #### Note
 - Additionally, to utilize the chatbot, you need to have [Ollama](https://ollama.com/library/llama3.2) (with llama 3.2 Model) running locally on your machine. 
