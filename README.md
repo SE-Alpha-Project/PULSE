@@ -10,19 +10,13 @@
     <a href="https://aditikilledar.github.io/burnout-proj3/index.html"><strong>Explore the API docs »</strong></a>
     <br /> -->
     <br />
-    <a href="https://github.com/J1mmySE24/burnout/blob/main/Tutorials.md">View Demo</a>
     ·
     <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
-    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
     <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
     <br>
     <!-- <a href="https://youtu.be/bYTZT8vcICI">View Video</a> -->
     ·
-    <a href="https://github.com/J1mmySE24/burnout/blob/main/Project3Scores.md">Scores</a>
-    ·
-    <a href="https://github.com/J1mmySE24/burnout/blob/main/Developer_README.md">Developer Documentation</a>
     <a href="https://github.com/J1mmySE24/burnout/blob/main/Developer_README.md">Developer Documentation</a>
   </p>
 </div>
@@ -44,19 +38,7 @@
 [![Python application](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml)
 [![Close as a feature](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml)
 
-<a href="https://github.com/J1mmySE24/burnout/fork" target="blank">
-<img src="https://img.shields.io/github/forks/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
-<img src="https://img.shields.io/github/stars/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp stars"/>
-<a href="https://github.com/J1mmySE24/burnout/issues" target="blank"> <img src="https://img.shields.io/github/issues-closed/J1mmySE24/burnout" alt="burnout-healthgoalsapp issues closed"/>
-</a>
-<a href="https://github.com/J1mmySE24/burnout/graphs/contributors" alt="Contributors">
-<img src="https://img.shields.io/github/contributors/J1mmySE24/burnout" /></a>
-<a href="https://github.com/J1mmySE24/burnout/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/J1mmySE24/burnout" /></a> 
-<a href="https://github.com/J1mmySE24/burnout/discussions" alt="discussion">
-<img src="https://img.shields.io/github/discussions/J1mmySE24/burnout" /></a> 
-<a href="https://img.shields.io/github/repo-size/J1mmySE24/burnout" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/J1mmySE24/burnout" /></a>
+
 ---
 ### Team 10
 #### Members
@@ -105,7 +87,8 @@
 
 
 ## **🔥 PULSE: Elevate Your Health & Fitness Game! 🔥**
- 
+https://github.com/user-attachments/assets/1f3986fb-fa4f-421a-bb03-14fe714ac62a
+
 Are you determined to achieve your dream physique? Desiring to take charge of your health? Looking for a platform that offers everything from calorie counting to enrolling in exciting fitness events? Welcome to **PULSE** – the only health and fitness companion you'll ever need.
  
 - **🍎 Nutrition Made Simple:**
