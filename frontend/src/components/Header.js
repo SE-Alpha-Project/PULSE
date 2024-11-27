@@ -79,7 +79,8 @@ function Header(props) {
                 paddingLeft: "10px",
               }}
             >
-              Pulse
+              PULSE
+
             </Typography>
           </Box>
           <Box sx={{ flexGrow: 1, display: "flex" }}>

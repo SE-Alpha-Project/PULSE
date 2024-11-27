@@ -13,7 +13,7 @@ const ContactUs = (props) => {
     // Compose the email body
     const emailBody = `Message: ${message.value}, From: ${name}`;
     // Construct the mailto link
-    const mailtoLink = `mailto:contactus_burnout@​yahoo.com?subject=${subject}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:contactus_pulse@​yahoo.com?subject=${subject}&body=${encodeURIComponent(emailBody)}`;
     // Open the default email client
     window.location.href = mailtoLink;
   };
@@ -31,7 +31,7 @@ const ContactUs = (props) => {
           Contact Us
         </Typography>
         <Typography variant="h5" align="justify" color="text.primary" paragraph>
-          Use the email below to contact the Pulse development team. Feel free to reach out to us for any questions, feedback, or inquiries.
+          Use the email below to contact the PULSE development team. Feel free to reach out to us for any questions, feedback, or inquiries.
           <br></br><br></br>
           Fill out the form below to send us an email.
         </Typography>

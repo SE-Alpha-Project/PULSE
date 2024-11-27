@@ -1,7 +1,7 @@
-# Contributing to BurnOut 4!!
+# Contributing to PULSE!
 <h3>Hello!👋</h3>
-<p>Firstly, thank you so much for showing interest in BurnOut 4 and contributing to our project.👍</p>
-The following are a set of guidelines for contributing to BurnOut. We are open to suggestions to enhance our project so feel free to propose changes to this document in a pull request.
+<p>Firstly, thank you so much for showing interest in PULSE and contributing to our project.👍</p>
+The following are a set of guidelines for contributing to PULSE. We are open to suggestions to enhance our project so feel free to propose changes to this document in a pull request.
 
 
 ### Table of contents
@@ -46,7 +46,7 @@ Everyone participating in this project needs to abide by the aPAS - A Personal A
     </ul>
   
   ## Suggesting Enhancements
-  This section guides you through submitting a suggestion for BurnOut, including completely new features and minor improvements to existing functionality. 
+  This section guides you through submitting a suggestion for PULSE, including completely new features and minor improvements to existing functionality. 
 
   Enhancement suggestions are tracked as GitHub issues. 
   After you've determined which repository your enhancement suggestion is related to, create an issue on that repository and provide the information like title, step-by-step description, specific examples.\
@@ -59,9 +59,9 @@ Everyone participating in this project needs to abide by the aPAS - A Personal A
   ## Pull Requests Methods
   The process described here has several goals: 
 
-  - Maintain BurnOut 3.0 quality
+  - Maintain PULSE 1.0 quality
   - Fix problems that are important to the users 
-  - Engage the community in working towards the best possible BurnOut 
+  - Engage the community in working towards the best possible PULSE 
   - Enable a sustainable system for Atom's maintainers to review contributions
 
   Ensure that you follow the steps mentioned below in order to have your contribution reviewed by the maintainers:
