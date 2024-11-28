@@ -160,7 +160,7 @@ Link to the implementation video of the PULSE application: [Video](https://drive
 
  ## My-Meals
 
-<img width='600' src="./resources/mymeal.png">
+<img width='600' src="./resources/mymeals.png">
 
 ## Calendar
 
