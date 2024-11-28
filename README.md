@@ -172,7 +172,7 @@ Link to the implementation video of the PULSE application: [Video](https://drive
 
  ## FAQs 
 
-<img width='600' src="./resources/faq.png">
+<img width='600' src="./resources/faqs.png">
 
  ## Chatbot
 
