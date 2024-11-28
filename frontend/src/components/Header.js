@@ -10,7 +10,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import WhatshotIcon from "@mui/icons-material/Whatshot"; 
+import dumbbell from "./assets/img/dumbbell.png";
 import axios from "axios";
 import useToken from './authentication/useToken';
 import { updateState } from "../burnoutReducer";
@@ -60,7 +60,12 @@ function Header(props) {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box>
-            <WhatshotIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <img 
+                  src={dumbbell}
+                  alt="Custom Icon" 
+                  style={{ width: '50px', height: '50px' }} // Adjust size as needed
+                  className="fire-icon" // Keep your existing class if needed
+                />
           </Box>
           <Box>
             <Typography

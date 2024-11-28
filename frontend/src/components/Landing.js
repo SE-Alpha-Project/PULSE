@@ -1,9 +1,8 @@
 import React from "react";
-import { Box, Button, Typography, Container, Grid } from "@mui/material";
+import { Box, Button, Typography, Container } from "@mui/material";
 import Navbar from "./Navbar";
 
 import landingImage from "./assets/img/landingImage.png";
-import lI from "./assets/img/landingImage.jpg";
 import Feature from "./Features";
 
 const LandingPage = () => {
