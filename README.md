@@ -142,9 +142,13 @@ Link to the implementation video of the PULSE application: [Video](https://drive
  
  <img width='600' src="./resources/signin.png">
 
- ## Homepage
+ ## Homepage1
  
 <img width='600' src="./resources/homepage.png">
+
+ ## Homepage2
+ 
+<img width='600' src="./resources/homepage2.png">
 
  ## Profile
  
@@ -164,11 +168,15 @@ Link to the implementation video of the PULSE application: [Video](https://drive
 
 ## Resources 
 
-<img width='600' src="./resources/resource.png">
+<img width='600' src="./resources/resources.png">
 
- ## FAQs with Chatbot 
+ ## FAQs 
 
 <img width='600' src="./resources/faq.png">
+
+ ## Chatbot
+
+<img width='600' src="./resources/chatbot.png">
 
  ## Contact-Us
 
