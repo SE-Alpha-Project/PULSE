@@ -319,7 +319,7 @@ Overall, the current test suite focuses heavily on security and unauthorized acc
 ### Screenshot of the running application
 
 #### Home page
-<img width='600' src="resources/index.png">
+<img width='600' src="resources/homepage.png">
 
 #### Profile page
 <img width='600' src="resources/profile.png">
