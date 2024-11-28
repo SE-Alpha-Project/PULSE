@@ -132,9 +132,11 @@ Link to the implementation video of the PULSE application: [Video](https://drive
 
 # Application Screenshots
 
-## Landing
+## Landing1
+ <img width='600' src="./resources/landing1.png">
  
- <img width='600' src="./resources/landing.png">
+## Landing2
+ <img width='600' src="./resources/landing2.png">
 
  ## Sign-In
  
@@ -142,19 +144,19 @@ Link to the implementation video of the PULSE application: [Video](https://drive
 
  ## Homepage
  
-<img width='600' src="./resources/home.png">
+<img width='600' src="./resources/homepage.png">
 
  ## Profile
  
-<img width='600' src="./resources/user.png">
+<img width='600' src="./resources/profile.png">
 
  ## Events
 
-<img width='600' src="./resources/events.png">
+<img width='600' src="./resources/event.png">
 
  ## My-Meals
 
-<img width='600' src="./resources/meal.png">
+<img width='600' src="./resources/mymeal.png">
 
 ## Calendar
 
@@ -170,7 +172,7 @@ Link to the implementation video of the PULSE application: [Video](https://drive
 
  ## Contact-Us
 
-<img width='600' src="./resources/contact.png">
+<img width='600' src="./resources/contactus.png">
 
 ### :memo: **Note:** Additional screenshots and a mini tutorials can be found here:[Tutorials.md](https://github.com/aditikilledar/burnout-proj3/blob/main/Tutorials.md)
 
