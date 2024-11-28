@@ -92,14 +92,39 @@ export default function Resources(props) {
                                     <a href={result.link} target="_blank" rel="noopener noreferrer">
                                         <h3>{result.title}</h3>
                                     </a>
-                                    <p>{result.snippet}</p>
-                                </div>
-                            </Grid>
-                        ))}
-                    </Grid>
-                </Container>
 
-                <Footer />
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {article.description || article.summary}  {/* Use appropriate field */}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        Published on: {new Date(article.publishedAt).toLocaleDateString()}  {/* Format date */}
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid> 
+                {visibleCount < resources.length && (
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+                <Button
+                    onClick={handleShowMore}
+                    variant="contained"
+                    sx={{
+                        backgroundColor: '#1976d2', 
+                        color: '#FFFFFF', 
+                        '&:hover': {
+                            backgroundColor: '#FFAA3D', 
+                        },
+                    }}
+                >
+                    Show More
+                </Button>
+            </Box>
+                        )}
+                    </Container>
+                <Footer/>
+
             </main>
         </ThemeProvider>
     );

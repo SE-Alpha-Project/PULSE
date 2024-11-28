@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Button, Typography, Container, Grid } from "@mui/material";
 import Navbar from "./Navbar";
-import landingImage from "./assets/img/landingImage.jpg";
+
+import landingImage from "./assets/img/landingImage.png";
+import lI from "./assets/img/landingImage.jpg";
 import Feature from "./Features";
 
 const LandingPage = () => {
@@ -52,7 +54,9 @@ const LandingPage = () => {
               maxWidth: "600px",
               marginX: "auto",
               fontSize: "1.2rem",
-              
+
+              color: "white",
+
             }}
           >
             PULSE is your daily health companion, designed to help you achieve your wellness goals.
@@ -77,7 +81,9 @@ const LandingPage = () => {
       </Box>
 
       {/* Features Section */}
-      <Box sx={{ py: 6, backgroundColor: "#f9f9f9" }}>
+
+      <Box sx={{ py: 6, backgroundColor: "black",}}>
+
         <Container>
           <Typography
             variant="h4"
@@ -86,6 +92,9 @@ const LandingPage = () => {
               fontWeight: "bold",
               textAlign: "center",
               mb: 4,
+
+              color: "white",
+
               
             }}
           >
@@ -110,7 +119,9 @@ const LandingPage = () => {
             component="p"
             sx={{ textAlign: "center", mb: 1 }}
           >
-            PULSE: Experience a Healthy Lifestyle
+
+            PULSE: Elevate Your Health & Fitness Game!
+
           </Typography>
           <Typography variant="body2" component="p" sx={{ textAlign: "center" }}>
             Ananya Patankar | Yash Shah | Chaitralee Datar

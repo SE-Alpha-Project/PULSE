@@ -1,4 +1,4 @@
-# Added Features in the Burnout v3.0 (What's new?)
+# Added Features in the Pulse v1.0 (What's new?)
 
 ### <li> Bug fixes.
 

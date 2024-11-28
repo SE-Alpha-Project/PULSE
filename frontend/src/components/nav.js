@@ -53,7 +53,7 @@ export const Container = styled.div`
       }
 
       span {
-        font-size: 32px; /* Increased font size for "BURNOUT" */
+        font-size: 32px; /* Increased font size for "PULSE" */
         font-weight: 900;
       }
     }

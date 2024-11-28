@@ -1,28 +1,22 @@
 <br />
 <div  align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/aditikilledar/burnout-proj3/assets/52149707/77028411-c5e2-4c30-a200-992aa12be968" alt="Logo" width="120" height="120">
+    <img src="https://github.com/SE-Alpha-Project/PULSE/blob/develop/frontend/public/assets/img/pulse.jpg" alt="Logo" width="120" height="120">
   </a>
   <h3 align="center">PULSE</h3>
   <p align="center">
-    Your daily health companion 🏃‍♀️
+    Elevate Your Health & Fitness Game!🏃‍♀️
     <!-- <br />
     <a href="https://aditikilledar.github.io/burnout-proj3/index.html"><strong>Explore the API docs »</strong></a>
     <br /> -->
     <br />
-    <a href="https://github.com/J1mmySE24/burnout/blob/main/Tutorials.md">View Demo</a>
     ·
     <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
-    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
     <a href="https://github.com/J1mmySE24/burnout/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
     <br>
     <!-- <a href="https://youtu.be/bYTZT8vcICI">View Video</a> -->
     ·
-    <a href="https://github.com/J1mmySE24/burnout/blob/main/Project3Scores.md">Scores</a>
-    ·
-    <a href="https://github.com/J1mmySE24/burnout/blob/main/Developer_README.md">Developer Documentation</a>
     <a href="https://github.com/J1mmySE24/burnout/blob/main/Developer_README.md">Developer Documentation</a>
   </p>
 </div>
@@ -34,6 +28,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/865633530.svg)](https://doi.org/10.5281/zenodo.14027128)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c85cdbb1-69cb-40dc-9717-deb52d6a5f55/deploy-status)](https://app.netlify.com/sites/pulse-workout/deploys)
 [![Build repo](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/build_repo.yml)
 [![Lint Python](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/syntax_checker.yml)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
@@ -42,19 +37,8 @@
 [![Run Tests On Push](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/unit_test.yml)
 [![Python application](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/python-app.yml)
 [![Close as a feature](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/J1mmySE24/burnout/actions/workflows/close_as_a_feature.yml)
-<a href="https://github.com/J1mmySE24/burnout/fork" target="blank">
-<img src="https://img.shields.io/github/forks/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp forks"/></a>
-<img src="https://img.shields.io/github/stars/J1mmySE24/burnout?style=flat-square" alt="burnout-healthgoalsapp stars"/>
-<a href="https://github.com/J1mmySE24/burnout/issues" target="blank"> <img src="https://img.shields.io/github/issues-closed/J1mmySE24/burnout" alt="burnout-healthgoalsapp issues closed"/>
-</a>
-<a href="https://github.com/J1mmySE24/burnout/graphs/contributors" alt="Contributors">
-<img src="https://img.shields.io/github/contributors/J1mmySE24/burnout" /></a>
-<a href="https://github.com/J1mmySE24/burnout/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/J1mmySE24/burnout" /></a> 
-<a href="https://github.com/J1mmySE24/burnout/discussions" alt="discussion">
-<img src="https://img.shields.io/github/discussions/J1mmySE24/burnout" /></a> 
-<a href="https://img.shields.io/github/repo-size/J1mmySE24/burnout" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/J1mmySE24/burnout" /></a>
+
+
 ---
 ### Team 10
 #### Members
@@ -68,7 +52,7 @@
 # Table of Contents  
 
 - [Table of Contents](#table-of-contents)
-  - [**🔥 PULSE: Elevate Your Health \& Fitness Game! 🔥**](#-burnout-elevate-your-health--fitness-game-)
+  - [**🔥 PULSE: Experience life the healthy way! 🔥**](#-burnout-elevate-your-health--fitness-game-)
 - [**💡 Why Choose PULSE?**](#-why-choose-burnout)
 - [Walkthrough](#walkthrough)
 - [Application Screenshots](#application-screenshots)
@@ -103,7 +87,8 @@
 
 
 ## **🔥 PULSE: Elevate Your Health & Fitness Game! 🔥**
- 
+https://github.com/user-attachments/assets/1f3986fb-fa4f-421a-bb03-14fe714ac62a
+
 Are you determined to achieve your dream physique? Desiring to take charge of your health? Looking for a platform that offers everything from calorie counting to enrolling in exciting fitness events? Welcome to **PULSE** – the only health and fitness companion you'll ever need.
  
 - **🍎 Nutrition Made Simple:**
@@ -236,6 +221,11 @@ Step 2:
  Step 5:
     Open the URL in your browser:  
       http://127.0.0.1:3000
+      
+ Step 6:
+   Compose and run the docker image:
+   
+    docker-compose up --build  
 
 #### Note
 - Additionally, to utilize the chatbot, you need to have [Ollama](https://ollama.com/library/llama3.2) (with llama 3.2 Model) running locally on your machine. 
@@ -359,9 +349,9 @@ The application can be extended with features like:
  <center>
   <table>
     <tr>
-    <td align="center"><a href="https://github.com/XingJinming-real"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Jinming Xing</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/krishapatel10"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>krisha patel</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/shreyasdvrj"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Shreyas Devaraj</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/chaitraleedatar"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Chaitralee Datar</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ananya09patankar"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Ananya Patankar</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/yash2705"><img src="Photo Here" width="100px;" alt=""/><br /><sub><b>Yash Shah</b></sub></a><br /></td>
         <!-- <td align="center"><a href="https://github.com/aiyer786"><img src="https://avatars.githubusercontent.com/u/60314222?s=400&u=0984f88aeb3a9c30f4ec8145176134e626843fd5&v=4" width="100px;" alt=""/><br /><sub><b>Aditya Iyer</b></sub></a><br /></td> -->
       <!-- <td align="center"><a href="https://github.com/aditikilledar"><img src="https://avatars.githubusercontent.com/u/73051765?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Killedar</b></sub></a></td>
     <td align="center"><a href="https://github.com/shashank-madan"><img src="https://avatars.githubusercontent.com/u/52149707?s=80&v=4" width="100px;" alt=""/><br /><sub><b>Shashank Madan</b></sub></a><br /></td>
