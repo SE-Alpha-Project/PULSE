@@ -11,7 +11,9 @@ function Copyright() {
         <Typography variant="body2" color="text.secondary">
             {'Copyright © '}
             {new Date().getFullYear()}{' '}
+
             Chaitralee Datar, Ananya Patankar, Yash Shah
+
         </Typography>
     );
 }

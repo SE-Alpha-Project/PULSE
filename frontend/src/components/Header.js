@@ -79,7 +79,9 @@ function Header(props) {
                 paddingLeft: "10px",
               }}
             >
+
               PULSE
+
 
             </Typography>
           </Box>
