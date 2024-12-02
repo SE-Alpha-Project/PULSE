@@ -179,7 +179,6 @@ In today's fast-paced world, maintaining health is a challenge. But with the rig
 
 <img width='600' src="./resources/contactus.png">
 
-### :memo: **Note:** Additional screenshots and a mini tutorials can be found here:[Tutorials.md](https://github.com/aditikilledar/burnout-proj3/blob/main/Tutorials.md)
 
 # Project TechStack
 
