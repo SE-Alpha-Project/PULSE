@@ -339,6 +339,9 @@ Here's what we added in this release.
 6. Resources page to keep yourself updated
 7. Additional FAQs giving you all the insights. 
 8. MongoDB is now on the cloud, with Atlas!
+9. Added Diet Tracker and analysis
+10. Added TDEE for adaptive goals in profile
+11. Dockerized the application.
 
 # Bug Fixes
 We fixed many bugs, but here are the most notable ones...
@@ -353,8 +356,7 @@ The application can be extended with features like:
 1. Counting macros.
 2. Food image analysis.
 3. Integration with activity tracker like fitbit.
-4. Dockerize the application.
-5. Hosting the application
+4. Hosting the application
    
 # Contributors
    
