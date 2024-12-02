@@ -68,7 +68,7 @@
   - [FAQs](#faq)
   - [Chatbot](#chatbot)
   - [Contact-Us](#contactus)
-    - [:memo: **Note:** Additional screenshots and a mini tutorials can be found here:Tutorials.md](#memo-note-additional-screenshots-and-a-mini-tutorials-can-be-found-heretutorialsmd)
+    - [:memo: **Note:** Additional screenshots and a mini tutorials can be found here:Tutorials.md](Tutorials.md)
 - [Project TechStack](#project-techstack)
 - [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
