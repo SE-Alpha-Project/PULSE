@@ -68,7 +68,8 @@
   - [FAQs](#faq)
   - [Chatbot](#chatbot)
   - [Contact-Us](#contactus)
-    - [:memo: **Note:** Additional screenshots and a mini tutorials can be found here:Tutorials.md](Tutorials.md)
+
+    
 - [Project TechStack](#project-techstack)
 - [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -124,10 +125,6 @@ So, are you ready to take the leap towards a healthier, happier you? Dive into *
  
 In today's fast-paced world, maintaining health is a challenge. But with the right tools and community, this challenge becomes an enjoyable journey. And PULSE is here to make sure of that.
 
-
-# Walkthrough
-
-Link to the implementation video of the PULSE application: [Video](https://drive.google.com/file/d/1UlaIKC_3sxjySAmIVvCIVoci0tKdaqf4/view?usp=drive_link)
 
 
 # Application Screenshots
