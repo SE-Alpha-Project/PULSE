@@ -5,7 +5,7 @@
   </a>
   <h3 align="center">PULSE</h3>
   <p align="center">
-    Elevate Your Health & Fitness Game!🏃‍♀️
+    Experience Life the Healthy Way!🏃‍♀️
     <!-- <br />
     <a href="https://aditikilledar.github.io/burnout-proj3/index.html"><strong>Explore the API docs »</strong></a>
     <br /> -->
@@ -23,7 +23,7 @@
 <br>
 
 ---
-<!-- We forked this repo from this [link](https://github.com/aditikilledar/burnout-proj3) -->
+
 [![codecov](https://codecov.io/gh/J1mmySE24/burnout/graph/badge.svg?token=nWtaSvxEU7)](https://codecov.io/gh/J1mmySE24/burnout)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![DOI](https://zenodo.org/badge/865633530.svg)](https://doi.org/10.5281/zenodo.14027128)
@@ -45,8 +45,6 @@
 * Chaitralee Datar	
 * Ananya Patankar	
 * Yash Shah
-
-<!-- https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9c-85a4-db05b5c2e438 -->
 
 
 # Table of Contents  
@@ -89,41 +87,42 @@
 - [License](#license)
 
 
-## **🔥 PULSE: Elevate Your Health & Fitness Game! 🔥**
+## ** 💪 PULSE: Experience Life the Healthy Way! 💪**
 https://github.com/user-attachments/assets/1f3986fb-fa4f-421a-bb03-14fe714ac62a
 
-Are you determined to achieve your dream physique? Desiring to take charge of your health? Looking for a platform that offers everything from calorie counting to enrolling in exciting fitness events? Welcome to **PULSE** – the only health and fitness companion you'll ever need.
- 
-- **🍎 Nutrition Made Simple:**
-Navigating the complex world of nutrition can be daunting. With PULSE, you can effortlessly track what you eat and gain insights into your calorie consumption. Whether you're having a quick salad or indulging in a cheat meal, every bite counts. And we're here to count it for you!
- 
-- **🔥 Ignite Your Calorie Burn:**
-Exercise isn't just about looking good; it's about feeling good too. Track every step taken, every calorie burned, and every drop of sweat shed. Watch yourself progress as PULSE pushes you to achieve your health goals.
- 
-- **🏊 Dive into Exciting Fitness Events:**
-Bored of your routine workout? Dive into an array of fitness events – from calming yoga sessions to adrenaline-pumping gym workouts. Whether you're into swimming, walking, or exploring new activities, there's something for everyone. Get social, challenge yourself, and discover activities you love.
- 
-- **📊 Tailored To You:**
-Everyone's health journey is unique. Input your age, current weight, height, target weight, and goals, and let PULSE craft a personalized plan for you. Watch in real-time as you inch closer to your goals and celebrate each milestone with us.
-  
-So, are you ready to take the leap towards a healthier, happier you? Dive into **PULSE** now and elevate your fitness game!
- 
-🔥 *Because it's not just about burning calories; it's about burning doubts, burning procrastination, and lighting up confidence!* 🔥
+Dreaming of achieving your ideal physique? Ready to take control of your health and wellness journey? Look no further than **PULSE** — your ultimate all-in-one health and fitness companion. From tracking your nutrition to joining exciting fitness events, PULSE empowers you every step of the way to reach your goals and live your healthiest life!
 
 
-# **💡 Why Choose PULSE?**
+**🥝 Simplified Nutrition Tracking:**  
+Understanding nutrition doesn’t have to be overwhelming. With PULSE, tracking your meals and managing your calorie intake is effortless. From healthy salads to indulgent cheat meals, every bite matters—and PULSE ensures you stay on top of it all with ease!
  
-- **Comprehensive Tracking:** From what you eat to how much you burn, monitor everything in one place.
-  
-- **Diverse Fitness Events:** Never fall into the monotony of routine. Stay excited about fitness with new events to join regularly. 
-  
-- **Personalized Insights:** Understand your body and habits better with data-driven feedback.
-  
-- **Community Support:** Engage with a like-minded community, exchange tips, and stay motivated.
-  
-- **Security:** Your data is precious, and we guard it like our own. Rest assured, your information stays private and secure.
+
+**🔥 Fuel Your Fitness Journey:**  
+Exercise isn’t just about appearances—it’s about feeling your best. With PULSE, you can track every step, every calorie burned, and every ounce of effort. Stay motivated and watch your progress as PULSE helps you crush your fitness goals one step at a time!
  
-In today's fast-paced world, maintaining health is a challenge. But with the right tools and community, this challenge becomes an enjoyable journey. And PULSE is here to make sure of that.
+**🏊 Explore Thrilling Fitness Events:**  
+Tired of the same old workout routine? With PULSE, you can immerse yourself in a variety of fitness events—from soothing yoga sessions to high-energy gym challenges. Whether it’s swimming, walking, or trying something entirely new, there’s an activity for everyone. Connect with others, push your limits, and uncover the workouts you truly enjoy!
+
+**📊 Personalized for Your Journey:**  
+Your health journey is as unique as you are. Simply enter your age, weight, height, target goals, and preferences, and let PULSE create a customized plan just for you. Track your progress in real-time, celebrate every milestone, and stay motivated as you get closer to achieving your goals!
+  
+So, are you ready to take the leap towards a healthier, happier you? Dive into **PULSE** now and elevate your fitness game!  
+
+💓 *Because it's not just about counting calories; it's about keeping your pulse strong, driving your passion, and energizing your confidence!* 💓
+
+# **🏋️‍♂️ Why Choose PULSE?**
+
+- **All-in-One Tracking:** Keep tabs on everything, from your meals to your workouts, all in one convenient place.  
+
+- **Engaging Fitness Events:** Break free from routine with exciting new activities and events to keep your fitness journey fresh and enjoyable.  
+
+- **Personalized Insights:** Gain a deeper understanding of your body and habits with data-driven feedback tailored to your unique journey.  
+
+- **Supportive Community:** Connect with like-minded individuals, share tips, and stay inspired through a vibrant community of fitness enthusiasts.  
+
+- **Top-Notch Security:** Your data is invaluable, and we treat it with the utmost care, ensuring it remains private and secure at all times.  
+
+In today’s fast-paced world, staying healthy can feel overwhelming. But with the right tools and a supportive community, it transforms into an empowering and enjoyable experience. That’s where PULSE steps in—to make your wellness journey simpler, smarter, and more rewarding.  
 
 
 
@@ -259,6 +258,8 @@ https://github.com/aditikilledar/burnout-proj3/assets/52149707/5873f399-194b-4a9
 - **Calendar Integration**: Connect with calendar apps to receive gym session reminders.
 - **Dockerized Repository & Hosting**: Dockerize the project repository and host it publicly.
 - **Fitness Buddies**: Integrate social media for connecting with fitness buddies.
+- **Weekly calorie summary dashboard**: Summary for the user's daily calorie intake on the home page.
+- **TDEE**: Calculator for total daily energy expenditure.
 - **Activity Tracker Integration**: Sync with activity trackers for seamless monitoring.
 
 ### Test Suite
