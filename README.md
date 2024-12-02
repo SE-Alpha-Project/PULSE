@@ -50,8 +50,8 @@
 # Table of Contents  
 
 - [Table of Contents](#table-of-contents)
-  - [**🔥 PULSE: Experience life the healthy way! 🔥**](#-burnout-elevate-your-health--fitness-game-)
-- [**💡 Why Choose PULSE?**](#-why-choose-burnout)
+  - [**💪 PULSE: Experience life the healthy way! 💪**](#-burnout-elevate-your-health--fitness-game-)
+- [**🎯Why Choose PULSE?**](#-why-choose-burnout)
 - [Walkthrough](#walkthrough)
 - [Application Screenshots](#application-screenshots)
   - [Landing1](#landing1)
@@ -87,7 +87,7 @@
 - [License](#license)
 
 
-## ** 💪 PULSE: Experience Life the Healthy Way! 💪**
+## **💪 PULSE: Experience Life the Healthy Way! 💪**
 https://github.com/user-attachments/assets/1f3986fb-fa4f-421a-bb03-14fe714ac62a
 
 Dreaming of achieving your ideal physique? Ready to take control of your health and wellness journey? Look no further than **PULSE** — your ultimate all-in-one health and fitness companion. From tracking your nutrition to joining exciting fitness events, PULSE empowers you every step of the way to reach your goals and live your healthiest life!
