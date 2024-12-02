@@ -362,7 +362,7 @@ The application can be extended with features like:
 
   # Contribution
   
-  Please refer the [CONTRIBUTING.md](https://github.com/adi-kiran/burnout-healthgoalsapp/blob/main/CONTRIBUTING.md) file for instructions on how to contribute to our repository.
+  Please refer the [CONTRIBUTING.md](CONTRIBUTING.md) file for instructions on how to contribute to our repository.
 
   # License
   
